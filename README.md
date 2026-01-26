@@ -1,10 +1,11 @@
 
-# Landing Page v01
+  # Landing Page v02
 
-This is a code bundle for Landing Page v01. The original project is available at https://www.figma.com/design/9bAldVHnhl2eZZIVHhudI8/Landing-Page-v01.
+  This is a code bundle for Landing Page v02. The original project is available at https://www.figma.com/design/LyVGFS35wfKLLGKcYQ4RK3/Landing-Page-v02.
 
-## Running the code
+  ## Running the code
 
-Run `npm i` to install the dependencies.
+  Run `npm i` to install the dependencies.
 
-Run `npm run dev` to start the development server.
+  Run `npm run dev` to start the development server.
+  

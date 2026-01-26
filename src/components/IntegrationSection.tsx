@@ -1,118 +1,65 @@
-import { Database, FileSpreadsheet, Webhook, CheckCircle2, BarChart3 } from 'lucide-react';
+import { Database, FileSpreadsheet, Webhook, CheckCircle2, BarChart3, Zap } from 'lucide-react';
 
 export function IntegrationSection() {
   return (
-    <section id="integration" className="py-20 bg-white">
+    <section id="integration" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-gray-900 mb-4 text-3xl lg:text-4xl">
-            Works with your existing systems
+          <h2 className="text-gray-900 mb-4 text-4xl lg:text-5xl">
+            Works with tools you already use
           </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Connect FairPay to your existing systems in minutes. No complex setup required.
+          </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side */}
-          <div>
-            <p className="text-lg text-gray-700 mb-8">
-              FairPay integrates seamlessly into your workflow:
-            </p>
-            
-            <div className="space-y-5">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                  <FileSpreadsheet className="w-5 h-5 text-indigo-600" />
-                </div>
-                <div>
-                  <div className="text-gray-900 mb-1">Payment links</div>
-                  <div className="text-sm text-gray-600">Send via email, SMS, or embed on your site</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
-                  <Webhook className="w-5 h-5 text-blue-600" />
-                </div>
-                <div>
-                  <div className="text-gray-900 mb-1">One-off & recurring requests</div>
-                  <div className="text-sm text-gray-600">Flexible payment options for any use case</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-cyan-100 flex items-center justify-center flex-shrink-0">
-                  <BarChart3 className="w-5 h-5 text-cyan-600" />
-                </div>
-                <div>
-                  <div className="text-gray-900 mb-1">Instant approvals</div>
-                  <div className="text-sm text-gray-600">Real-time tracking and notifications</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-purple-600" />
-                </div>
-                <div>
-                  <div className="text-gray-900 mb-1">Automatic reconciliation</div>
-                  <div className="text-sm text-gray-600">Sync to Xero, MYOB, QuickBooks</div>
-                </div>
-              </div>
+        {/* Popular integrations logos */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="flex items-center justify-center p-6 bg-white rounded-xl border border-gray-200">
+              <span className="text-lg font-semibold text-gray-700">Xero</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-white rounded-xl border border-gray-200">
+              <span className="text-lg font-semibold text-gray-700">MYOB</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-white rounded-xl border border-gray-200">
+              <span className="text-lg font-semibold text-gray-700">QuickBooks</span>
+            </div>
+            <div className="flex items-center justify-center p-6 bg-white rounded-xl border border-gray-200">
+              <span className="text-lg font-semibold text-gray-700">Stripe</span>
             </div>
           </div>
-          
-          {/* Right side - Dashboard illustration */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-indigo-500 to-blue-600 rounded-3xl p-8 shadow-2xl">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-white/60"></div>
-                  <div className="w-3 h-3 rounded-full bg-white/60"></div>
-                  <div className="w-3 h-3 rounded-full bg-white/60"></div>
-                </div>
-                
-                <div className="text-white/90 text-sm mb-4">FairPay Dashboard</div>
-                
-                <div className="space-y-3">
-                  <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Database className="w-4 h-4 text-white" />
-                      <div className="text-white text-sm">Connected ERPs</div>
-                    </div>
-                    <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded bg-white/30"></div>
-                      <div className="w-8 h-8 rounded bg-white/30"></div>
-                      <div className="w-8 h-8 rounded bg-white/30"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
-                    <div className="text-white text-sm mb-2">Live Payment Status</div>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="text-xs text-white/80">Approved</div>
-                        <div className="text-xs text-green-300">●</div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-xs text-white/80">Processing</div>
-                        <div className="text-xs text-blue-300">●</div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-xs text-white/80">Settled</div>
-                        <div className="text-xs text-green-300">●</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center mb-4">
+              <FileSpreadsheet className="w-6 h-6 text-indigo-600" />
             </div>
-            
-            {/* Floating connection icons */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center">
-              <Database className="w-8 h-8 text-indigo-600" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Payment Links</h3>
+            <p className="text-gray-600">
+              Send via email, SMS, or embed on your website. No coding required.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4">
+              <Webhook className="w-6 h-6 text-blue-600" />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white rounded-xl shadow-lg flex items-center justify-center">
-              <Webhook className="w-8 h-8 text-blue-600" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">API Access</h3>
+            <p className="text-gray-600">
+              Full API documentation for custom integrations and automations.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+            <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4">
+              <CheckCircle2 className="w-6 h-6 text-green-600" />
             </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Auto Reconciliation</h3>
+            <p className="text-gray-600">
+              Automatic sync with your accounting software. Zero manual entry.
+            </p>
           </div>
         </div>
       </div>
