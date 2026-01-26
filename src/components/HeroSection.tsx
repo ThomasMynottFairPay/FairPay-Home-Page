@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, TrendingDown, Zap, Shield, Lock, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle, TrendingDown, Zap, GraduationCap, Dumbbell, Building2, Heart, Briefcase, Users } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function HeroSection() {
@@ -8,11 +8,6 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side */}
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full mb-6">
-              <Award className="w-4 h-4" />
-              <span className="text-sm font-medium">Trusted by 500+ Australian organisations</span>
-            </div>
-            
             <h1 className="text-gray-900 mb-3 text-5xl lg:text-6xl">
               The new way to<br />collect payments
             </h1>
@@ -21,48 +16,51 @@ export function HeroSection() {
             </div>
             
             <p className="text-gray-600 mb-4 text-lg leading-relaxed">
-              Stop using outdated direct-debit payments and start using PayTo®. Get instant, secure and low-cost funds into your organisation — without the admin overhead.
+              Stop using outdated direct-debit payments and start using PayTo®. It is the new way to get instant, secure and low-cost funds into your organisation
             </p>
             
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
               Payments that just work — without chasing.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 flex items-center justify-center gap-2">
                 Start collecting payments
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="px-6 py-3 bg-white text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
-                See how it works
+                Calculate your savings
               </button>
             </div>
             
-            {/* Security & Compliance badges */}
-            <div className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-gray-200">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-green-600" />
-                <span className="text-sm text-gray-600">Bank-level security</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Lock className="w-5 h-5 text-green-600" />
-                <span className="text-sm text-gray-600">PCI-DSS Compliant</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-600" />
-                <span className="text-sm text-gray-600">NPP Certified</span>
-              </div>
-            </div>
-            
-            {/* Industry pills - more compact */}
-            <div>
-              <p className="text-sm text-gray-500 mb-3">Designed for:</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">Schools & Education</span>
-                <span className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">Childcare</span>
-                <span className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">Strata Management</span>
-                <span className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">Health & Wellness</span>
-                <span className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm">Professional Services</span>
+            {/* Trust bar */}
+            <div className="border-t border-gray-200 pt-8">
+              <p className="text-sm text-gray-500 mb-6">Trusted by organisations across industries</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-3">
+                <div className="flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Schools & Education</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Dumbbell className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Fitness & Gyms</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Property Management</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Churches & Nonprofits</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Briefcase className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Professional Services</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4 text-gray-400" />
+                  <span className="text-gray-700">Membership Clubs</span>
+                </div>
               </div>
             </div>
           </div>

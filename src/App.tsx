@@ -2,9 +2,6 @@ import { HeroSection } from './components/HeroSection';
 import { QualificationSection } from './components/QualificationSection';
 import { ProblemSection } from './components/ProblemSection';
 import { SolutionSection } from './components/SolutionSection';
-import { ComparisonSection } from './components/ComparisonSection';
-import { HowItWorksSection } from './components/HowItWorksSection';
-import { PaymentTypesSection } from './components/PaymentTypesSection';
 import { PayToWorkflowsSection } from './components/PayToWorkflowsSection';
 import { MidPageCTASection } from './components/MidPageCTASection';
 import { RecurringSection } from './components/RecurringSection';
@@ -22,13 +19,18 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Navigation />
       <HeroSection />
-      <ComparisonSection />
-      <HowItWorksSection />
-      <PaymentTypesSection />
-      <TestimonialSection />
+      <ProblemSection />
+      <QualificationSection />
+      <SolutionSection />
+      <PayToWorkflowsSection />
+      <MidPageCTASection />
+      <RecurringSection />
+      <OneOffPaymentsSection />
+      <CardPaymentsSection />
+      <BecsSection />
       <IndustrySection />
       <IntegrationSection />
-      <BecsSection />
+      <TestimonialSection />
       <FinalCTASection />
     </div>
   );
