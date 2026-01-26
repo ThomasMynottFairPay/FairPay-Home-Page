@@ -14,25 +14,30 @@ export function HeroSection() {
             <div className="text-3xl lg:text-4xl text-gray-600 mb-6">
               – fast, safe & easy.
             </div>
-            
+
             <p className="text-gray-600 mb-4 text-lg leading-relaxed">
               Stop using outdated direct-debit payments and start using PayTo®. It is the new way to get instant, secure and low-cost funds into your organisation
             </p>
-            
+
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
               Payments that just work — without chasing.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 flex items-center justify-center gap-2">
-                Start collecting payments
+              <a
+                href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 flex items-center justify-center gap-2"
+              >
+                Join the waitlist
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </a>
               <button className="px-6 py-3 bg-white text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
                 Calculate your savings
               </button>
             </div>
-            
+
             {/* Trust bar */}
             <div className="border-t border-gray-200 pt-8">
               <p className="text-sm text-gray-500 mb-6">Trusted by organisations across industries</p>
@@ -64,7 +69,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-          
+
           {/* Right side visual */}
           <div className="relative">
             <div className="relative z-10">
@@ -76,7 +81,7 @@ export function HeroSection() {
                     <div className="w-20 h-3 rounded-full bg-white/30"></div>
                     <div className="w-3 h-3 rounded-full bg-white/30"></div>
                   </div>
-                  
+
                   <div className="flex-1 flex flex-col items-center justify-center text-white">
                     <CheckCircle className="w-20 h-20 mb-6" strokeWidth={1.5} />
                     <div className="text-center">
@@ -85,11 +90,11 @@ export function HeroSection() {
                       <div className="text-sm opacity-70">Your payment setup is complete</div>
                     </div>
                   </div>
-                  
+
                   <div className="h-1 w-1/3 mx-auto bg-white/30 rounded-full"></div>
                 </div>
               </div>
-              
+
               {/* Dashboard card */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-5 border border-gray-200 max-w-[200px]">
                 <div className="space-y-3">
