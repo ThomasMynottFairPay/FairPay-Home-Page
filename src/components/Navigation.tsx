@@ -9,19 +9,24 @@ export function Navigation() {
           <img src={logo} alt="FairPay" className="w-10 h-10 rounded-xl" />
           <span className="text-xl text-gray-900">FairPay</span>
         </div>
-        
+
         <div className="hidden md:flex items-center gap-8">
           <a href="#payto" className="text-gray-600 hover:text-gray-900 transition-colors">PayTo®</a>
           <a href="#high-trust" className="text-gray-600 hover:text-gray-900 transition-colors">High Trust</a>
           <a href="#card-payments" className="text-gray-600 hover:text-gray-900 transition-colors">Card Payments</a>
           <a href="#integration" className="text-gray-600 hover:text-gray-900 transition-colors">Integration</a>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <button className="text-gray-600 hover:text-gray-900 transition-colors">Sign in</button>
-          <button className="px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+          <a
+            href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+          >
             Get started
-          </button>
+          </a>
         </div>
       </div>
     </nav>

@@ -14,23 +14,28 @@ export function FinalCTASection() {
               Start collecting recurring, one-off, and high-value payments with our <strong>low-cost, AI-enabled platform</strong>.
             </p>
           </div>
-          
+
           {/* Right side - CTAs */}
           <div className="space-y-5">
-            <button className="w-full px-8 py-4 bg-white text-indigo-600 rounded-xl hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 group">
+            <a
+              href="https://calendly.com/thomas-fairpay-ai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full px-8 py-4 bg-white text-indigo-600 rounded-xl hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 group"
+            >
               <Calendar className="w-6 h-6" />
               <span className="text-lg">Book a 15-minute intro</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            
+            </a>
+
             <button className="w-full px-8 py-4 bg-indigo-500 text-white border-2 border-indigo-400 rounded-xl hover:bg-indigo-400 transition-all flex items-center justify-center gap-3 group">
               <Play className="w-6 h-6" />
               <span className="text-lg">See a live demo</span>
             </button>
-            
+
             <div className="text-center pt-2">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-indigo-100 hover:text-white transition-colors inline-flex items-center gap-2 group"
               >
                 Join the early access waitlist
@@ -40,7 +45,7 @@ export function FinalCTASection() {
           </div>
         </div>
       </div>
-      
+
       {/* Footer */}
       <div className="max-w-7xl mx-auto px-6 mt-20 pt-12 border-t border-indigo-500/30">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
@@ -52,7 +57,7 @@ export function FinalCTASection() {
               <div><a href="#" className="text-indigo-200 hover:text-white transition-colors">Security</a></div>
             </div>
           </div>
-          
+
           <div>
             <div className="text-white mb-4">Use Cases</div>
             <div className="space-y-2 text-sm">
@@ -61,7 +66,7 @@ export function FinalCTASection() {
               <div><a href="#" className="text-indigo-200 hover:text-white transition-colors">Property</a></div>
             </div>
           </div>
-          
+
           <div>
             <div className="text-white mb-4">Resources</div>
             <div className="space-y-2 text-sm">
@@ -70,7 +75,7 @@ export function FinalCTASection() {
               <div><a href="#" className="text-indigo-200 hover:text-white transition-colors">Support</a></div>
             </div>
           </div>
-          
+
           <div>
             <div className="text-white mb-4">Company</div>
             <div className="space-y-2 text-sm">
@@ -80,7 +85,7 @@ export function FinalCTASection() {
             </div>
           </div>
         </div>
-        
+
         <div className="text-center text-indigo-300 text-sm">
           © 2024 FairPay. Built for the future of Australian payments.
         </div>
