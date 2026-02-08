@@ -25,7 +25,7 @@ export function Navigation() {
             rel="noopener noreferrer"
             className="px-5 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
           >
-            Get started
+            Join Waitlist
           </a>
         </div>
       </div>
