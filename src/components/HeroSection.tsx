@@ -9,18 +9,14 @@ export function HeroSection() {
           {/* Left side */}
           <div>
             <h1 className="text-gray-900 mb-3 text-5xl lg:text-6xl">
-              The new way to<br />collect payments
+              Traditional payments cost you time & money
             </h1>
             <div className="text-3xl lg:text-4xl text-gray-600 mb-6">
-              – fast, safe & easy.
+              FairPay is the new way to collect funds.
             </div>
 
-            <p className="text-gray-600 mb-4 text-lg leading-relaxed">
-              Stop using outdated direct-debit payments and start using PayTo®. It is the new way to get instant, secure and low-cost funds into your organisation
-            </p>
-
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              Payments that just work — without chasing.
+              Easy, Automated, Low-Cost
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
