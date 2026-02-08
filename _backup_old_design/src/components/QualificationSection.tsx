@@ -43,7 +43,7 @@ export function QualificationSection() {
       <div className="max-w-5xl mx-auto px-6 text-center">
         <div className="mb-6">
           <p className="text-sm uppercase tracking-wide text-white/80">
-            Easy to use · Automated & AI Enabled · Low-Cost
+            Built for organisations with recurring payments
           </p>
         </div>
         

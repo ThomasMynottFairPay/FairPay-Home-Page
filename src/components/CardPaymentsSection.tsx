@@ -1,4 +1,5 @@
-import { CreditCard, CheckCircle2, BarChart3 } from 'lucide-react';
+import { CreditCard, CheckCircle2, BarChart3, ShieldCheck } from 'lucide-react';
+import stripePartnerLogo from 'figma:asset/3885b1935f7e7e59625f98d3809637f4489f401d.png';
 
 export function CardPaymentsSection() {
   return (
@@ -9,11 +10,11 @@ export function CardPaymentsSection() {
             {/* Left side - content */}
             <div>
               <h2 className="text-gray-900 mb-6 text-3xl lg:text-4xl">
-                Accept cards too — one platform for all payments
+                Accept cards too — one easy platform
               </h2>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                 If customers prefer paying by card, FairPay supports that as well. Use card payments 
-                as a fallback or primary method, all managed through one clean dashboard.
+                as a fallback or primary method, all managed through one <strong>easy, automated dashboard</strong>.
               </p>
               
               <div className="space-y-4">
@@ -28,6 +29,22 @@ export function CardPaymentsSection() {
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700 text-lg">Unified reporting and reconciliation</span>
+                </div>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-gray-200">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src={stripePartnerLogo} alt="Stripe Partner" className="h-8 md:h-9" />
+                  <div className="h-8 w-px bg-gray-200"></div>
+                  <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                    Official Platform<br/>Partner
+                  </div>
+                </div>
+                <div className="flex items-start gap-2">
+                  <ShieldCheck className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-gray-600 max-w-md">
+                    Payments are processed via Stripe — <strong>fully secure, trusted, and compliant</strong> with Australian financial standards.
+                  </p>
                 </div>
               </div>
             </div>

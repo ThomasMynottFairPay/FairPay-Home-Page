@@ -4,18 +4,18 @@ export function PayToWorkflowsSection() {
   const merchantFeatures = [
     {
       icon: Settings,
-      title: 'Set-and-forget payment management',
+      title: 'Set-and-forget payment automation',
       description: 'Create payments once and let FairPay handle pauses, changes, retries, and expiry automatically.'
     },
     {
       icon: BarChart3,
-      title: 'Admin dashboards for real teams',
-      description: 'See what\'s approved, paid, overdue, or needs attention — all in one place.'
+      title: 'Easy-to-use dashboards',
+      description: 'See what\'s approved, paid, overdue, or needs attention — all in one simple view.'
     },
     {
       icon: RefreshCw,
-      title: 'Automatic retries and lifecycle handling',
-      description: 'Reduce failed payments and arrears without manual follow-ups.'
+      title: 'AI-enabled smart retries',
+      description: 'Reduce failed payments and arrears automatically without manual follow-ups.'
     },
     {
       icon: FileSpreadsheet,
@@ -31,10 +31,10 @@ export function PayToWorkflowsSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-gray-900 mb-4 text-3xl lg:text-4xl">
-            The PayTo® platform powering your recurring payments
+            The automated PayTo® platform powering your revenue
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Most providers give you PayTo® as a payment rail. FairPay goes further by providing the workflows, visibility, and automation businesses need to manage payments every month — without manual chasing.
+            FairPay goes further than basic payment rails by providing the <strong>easy, automated workflows</strong> businesses need to manage payments every month — keeping costs low.
           </p>
         </div>
         

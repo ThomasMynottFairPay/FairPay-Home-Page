@@ -14,7 +14,7 @@ export function IntegrationSection() {
           {/* Left side */}
           <div>
             <p className="text-lg text-gray-700 mb-8">
-              FairPay is <strong>easy to connect</strong> to your workflow:
+              FairPay integrates seamlessly into your workflow:
             </p>
             
             <div className="space-y-5">

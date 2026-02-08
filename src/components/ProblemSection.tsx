@@ -236,7 +236,7 @@ export function ProblemSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="calculator" className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-500 rounded-full blur-3xl"></div>
@@ -250,10 +250,10 @@ export function ProblemSection() {
             <span className="text-sm">The hidden cost of legacy payments</span>
           </div>
           <h2 className="text-gray-900 mb-4 text-3xl lg:text-4xl">
-            Your payment system is costing you time and money
+            Manual payments cost you time & money
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            The real cost of payments isn't just fees — it's failure, delay, and time lost.
+            The real cost of legacy payments isn't just fees — it's the lack of automation and high failure rates.
           </p>
         </div>
         
@@ -398,7 +398,7 @@ export function ProblemSection() {
 
             {/* Calm tie-back line */}
             <div className="text-center text-sm text-gray-600 leading-relaxed max-w-2xl mx-auto">
-              Payments that just work remove these losses by failing less, settling faster, and reducing admin overhead.
+              FairPay's <strong>automated, AI-enabled platform</strong> removes these losses by failing less, settling faster, and reducing admin overhead.
             </div>
           </div>
         </div>

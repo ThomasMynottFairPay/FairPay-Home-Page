@@ -6,7 +6,7 @@ export function OneOffPaymentsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-gray-900 mb-4 text-3xl lg:text-4xl">
-            One-off and high-value payments made safe, simple & low-cost
+            One-off and high-value payments made safe and simple
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-3">
             <strong className="text-gray-900">Designed to prevent invoice redirection fraud and wrong-account payments.</strong>

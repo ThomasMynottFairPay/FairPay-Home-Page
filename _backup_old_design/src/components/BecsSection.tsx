@@ -23,14 +23,6 @@ export function BecsSection() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <div className="text-gray-900 mb-1">Easy transition</div>
-                  <div className="text-sm text-gray-600">FairPay handles the switch for you</div>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                <div>
                   <div className="text-gray-900 mb-1">Instant settlement</div>
                   <div className="text-sm text-gray-600">Money arrives in seconds, not days</div>
                 </div>

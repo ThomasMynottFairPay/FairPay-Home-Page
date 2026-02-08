@@ -28,11 +28,11 @@ export function SolutionSection() {
           {/* Left: Content */}
           <div>
             <h2 className="text-gray-900 mb-6 text-3xl lg:text-4xl">
-              Easy to set up, secure in seconds
+              Setup secure payments in seconds
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Whether you're at enrolment, check-in, or just after a conversation — FairPay makes it <strong>easy</strong> to create a payment on the spot.
+              Whether you're at enrolment, check-in, sign-up, inspection, a service call, or just after a conversation — FairPay lets you create a payment on the spot from your phone.
             </p>
             
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
@@ -42,15 +42,15 @@ export function SolutionSection() {
             <div className="space-y-4 mb-12">
               <div className="flex items-start gap-3">
                 <div className="text-gray-400 mt-1">×</div>
-                <p className="text-lg text-gray-900">Automated & Paperless</p>
+                <p className="text-lg text-gray-900">No paperwork</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-gray-400 mt-1">×</div>
-                <p className="text-lg text-gray-900">No bank details required</p>
+                <p className="text-lg text-gray-900">No bank details</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-gray-400 mt-1">×</div>
-                <p className="text-lg text-gray-900">Low-cost processing</p>
+                <p className="text-lg text-gray-900">No chasing later</p>
               </div>
             </div>
             

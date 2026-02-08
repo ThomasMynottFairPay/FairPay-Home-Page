@@ -4,8 +4,8 @@ export function RecurringSection() {
   const steps = [
     {
       icon: FileText,
-      title: 'Set up payment',
-      description: 'Enter amount and schedule.',
+      title: 'Easy setup',
+      description: 'Enter amount and schedule in seconds.',
       color: 'from-indigo-500 to-indigo-600'
     },
     {
@@ -16,8 +16,8 @@ export function RecurringSection() {
     },
     {
       icon: Repeat,
-      title: 'Payments run automatically',
-      description: 'No chasing. No admin. No surprises.',
+      title: 'Runs automatically',
+      description: 'No chasing. No admin. AI-enabled retries.',
       color: 'from-cyan-500 to-cyan-600'
     }
   ];
@@ -27,10 +27,10 @@ export function RecurringSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-gray-900 mb-4 text-3xl lg:text-4xl">
-            Instant recurring payments — solved.
+            Automated recurring payments — solved.
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Account-to-account payments that are cheaper than cards. <strong>Most organisations save 40–70% compared to card fees.</strong>
+            Easy account-to-account payments that are cheaper than cards. <strong>Most organisations save 40–70% compared to card fees.</strong>
           </p>
         </div>
         
