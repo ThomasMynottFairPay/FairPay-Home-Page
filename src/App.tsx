@@ -1,37 +1,33 @@
-import { HeroSection } from './components/HeroSection';
-import { QualificationSection } from './components/QualificationSection';
-import { ProblemSection } from './components/ProblemSection';
-import { SolutionSection } from './components/SolutionSection';
-import { PayToWorkflowsSection } from './components/PayToWorkflowsSection';
-import { MidPageCTASection } from './components/MidPageCTASection';
-import { RecurringSection } from './components/RecurringSection';
-import { OneOffPaymentsSection } from './components/OneOffPaymentsSection';
-import { CardPaymentsSection } from './components/CardPaymentsSection';
-import { BecsSection } from './components/BecsSection';
-import { IndustrySection } from './components/IndustrySection';
-import { IntegrationSection } from './components/IntegrationSection';
-import { TestimonialSection } from './components/TestimonialSection';
-import { FinalCTASection } from './components/FinalCTASection';
-import { Navigation } from './components/Navigation';
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { ProblemSection } from "./components/ProblemSection";
+import { WhyPayTo } from "./components/WhyPayTo";
+import { WhyFairPay } from "./components/WhyFairPay";
+import { AISection } from "./components/AISection";
+import { HowItWorks } from "./components/HowItWorks";
+import { UseCases } from "./components/UseCases";
+import { WhyNow } from "./components/WhyNow";
+import { FAQ } from "./components/FAQ";
+import { CTAStrip } from "./components/CTAStrip";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      <HeroSection />
-      <ProblemSection />
-      <QualificationSection />
-      <SolutionSection />
-      <PayToWorkflowsSection />
-      <MidPageCTASection />
-      <RecurringSection />
-      <OneOffPaymentsSection />
-      <CardPaymentsSection />
-      <BecsSection />
-      <IndustrySection />
-      <IntegrationSection />
-      <TestimonialSection />
-      <FinalCTASection />
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-teal-100 selection:text-teal-900">
+      <Navbar />
+      <main>
+        <Hero />
+        <ProblemSection />
+        <WhyPayTo />
+        <WhyFairPay />
+        <AISection />
+        <HowItWorks />
+        <UseCases />
+        <WhyNow />
+        <FAQ />
+        <CTAStrip />
+      </main>
+      <Footer />
     </div>
   );
 }
