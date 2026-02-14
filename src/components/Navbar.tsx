@@ -26,9 +26,8 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-100" : "bg-white/0"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-100" : "bg-white/0"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
@@ -57,12 +56,18 @@ export function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="#waitlist"
+            href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist="
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium text-slate-600 hover:text-teal-600"
           >
             Join waitlist
           </a>
-          <Button size="sm">Book a demo</Button>
+          <Button size="sm" asChild>
+            <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
+              Book a demo
+            </a>
+          </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -95,10 +100,16 @@ export function Navbar() {
                 </a>
               ))}
               <div className="flex flex-col gap-3 mt-4">
-                <Button variant="secondary" className="w-full justify-center">
-                  Join waitlist
+                <Button variant="secondary" className="w-full justify-center" asChild>
+                  <a href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=" target="_blank" rel="noopener noreferrer">
+                    Join waitlist
+                  </a>
                 </Button>
-                <Button className="w-full justify-center">Book a demo</Button>
+                <Button className="w-full justify-center" asChild>
+                  <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
+                    Book a demo
+                  </a>
+                </Button>
               </div>
             </div>
           </motion.div>

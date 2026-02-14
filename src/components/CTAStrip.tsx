@@ -11,8 +11,16 @@ export function CTAStrip() {
           See how FairPay brings PayTo®, cards, and AI-powered operations together — so your team spends less time chasing payments.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg">Book a demo</Button>
-          <Button size="lg" variant="secondary">Join the waitlist</Button>
+          <Button size="lg" asChild>
+            <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
+              Book a demo
+            </a>
+          </Button>
+          <Button size="lg" variant="secondary" asChild>
+            <a href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=" target="_blank" rel="noopener noreferrer">
+              Join the waitlist
+            </a>
+          </Button>
         </div>
       </div>
     </section>

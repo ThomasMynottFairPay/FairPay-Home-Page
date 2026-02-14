@@ -10,9 +10,9 @@ function HeroVisual() {
 
       {/* Content Container */}
       <div className="relative z-10 flex flex-col gap-8 px-2">
-        
+
         {/* TOP: Legacy Comparison (Cards/Direct Debit) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -28,30 +28,30 @@ function HeroVisual() {
 
           {/* Middle: Slow Path */}
           <div className="flex-1 flex flex-col items-center justify-center gap-2 px-2">
-             {/* Top Label: High Fees */}
-             <div className="flex items-center gap-2">
-                <span className="text-[10px] font-medium text-red-500 bg-red-50 px-2 py-0.5 rounded-full border border-red-100 flex items-center gap-1">
-                    <TrendingDown className="w-3 h-3 rotate-180" /> High fees
-                </span>
-             </div>
-             
-             {/* Dashed Line */}
-             <div className="w-full h-[2px] bg-slate-300 relative flex items-center justify-center my-1">
-                 <div className="absolute inset-0 border-t-2 border-dashed border-slate-300 w-full top-[-1px]"></div>
-                 
-                 {/* Moving Element (Slow) */}
-                 <motion.div 
-                     animate={{ x: ["-100%", "100%"] }}
-                     transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-                     className="absolute w-2 h-2 bg-slate-400 rounded-full"
-                 />
-             </div>
+            {/* Top Label: High Fees */}
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-medium text-red-500 bg-red-50 px-2 py-0.5 rounded-full border border-red-100 flex items-center gap-1">
+                <TrendingDown className="w-3 h-3 rotate-180" /> High fees
+              </span>
+            </div>
 
-             {/* Bottom Label: Delay */}
-             <div className="bg-white px-2 py-1 rounded-md border border-slate-200 shadow-sm flex items-center gap-1.5">
-                <CalendarClock className="w-3.5 h-3.5 text-amber-500" />
-                <span className="text-[10px] font-bold text-slate-600">2-3 Days</span>
-             </div>
+            {/* Dashed Line */}
+            <div className="w-full h-[2px] bg-slate-300 relative flex items-center justify-center my-1">
+              <div className="absolute inset-0 border-t-2 border-dashed border-slate-300 w-full top-[-1px]"></div>
+
+              {/* Moving Element (Slow) */}
+              <motion.div
+                animate={{ x: ["-100%", "100%"] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="absolute w-2 h-2 bg-slate-400 rounded-full"
+              />
+            </div>
+
+            {/* Bottom Label: Delay */}
+            <div className="bg-white px-2 py-1 rounded-md border border-slate-200 shadow-sm flex items-center gap-1.5">
+              <CalendarClock className="w-3.5 h-3.5 text-amber-500" />
+              <span className="text-[10px] font-bold text-slate-600">2-3 Days</span>
+            </div>
           </div>
 
           {/* Right: Merchant */}
@@ -65,11 +65,11 @@ function HeroVisual() {
 
 
         {/* BOTTOM: FairPay / PayTo Flow */}
-        <motion.div 
-           initial={{ opacity: 0, scale: 0.95 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ delay: 0.4 }}
-           className="w-full flex items-center justify-between p-6 bg-white rounded-xl border-2 border-teal-100 shadow-lg relative overflow-visible"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4 }}
+          className="w-full flex items-center justify-between p-6 bg-white rounded-xl border-2 border-teal-100 shadow-lg relative overflow-visible"
         >
           {/* Label Badge */}
           <div className="absolute -top-3 left-6 bg-teal-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm">
@@ -89,41 +89,41 @@ function HeroVisual() {
 
           {/* Fast Path */}
           <div className="flex-1 flex flex-col items-center px-4 relative h-14 justify-center">
-             <div className="flex justify-center gap-3 w-full absolute -top-4">
-                <motion.span 
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 }}
-                    className="flex items-center gap-1 bg-teal-50 px-1.5 py-0.5 rounded text-[10px] font-bold text-teal-700 border border-teal-100"
-                >
-                    <Zap className="w-3 h-3 fill-teal-600" /> INSTANT
-                </motion.span>
-                <motion.span 
-                    initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2 }}
-                    className="flex items-center gap-1 bg-teal-50 px-1.5 py-0.5 rounded text-[10px] font-bold text-teal-700 border border-teal-100"
-                >
-                    <TrendingDown className="w-3 h-3" /> LOW COST
-                </motion.span>
-             </div>
+            <div className="flex justify-center gap-3 w-full absolute -top-4">
+              <motion.span
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="flex items-center gap-1 bg-teal-50 px-1.5 py-0.5 rounded text-[10px] font-bold text-teal-700 border border-teal-100"
+              >
+                <Zap className="w-3 h-3 fill-teal-600" /> INSTANT
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+                className="flex items-center gap-1 bg-teal-50 px-1.5 py-0.5 rounded text-[10px] font-bold text-teal-700 border border-teal-100"
+              >
+                <TrendingDown className="w-3 h-3" /> LOW COST
+              </motion.span>
+            </div>
 
-             {/* Rail */}
-             <div className="w-full h-3 bg-slate-100 rounded-full relative overflow-hidden mt-2 border border-slate-200/50">
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(20,184,166,0.3),transparent)] w-1/2 animate-[shimmer_1.5s_infinite]" />
-             </div>
+            {/* Rail */}
+            <div className="w-full h-3 bg-slate-100 rounded-full relative overflow-hidden mt-2 border border-slate-200/50">
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(20,184,166,0.3),transparent)] w-1/2 animate-[shimmer_1.5s_infinite]" />
+            </div>
 
-             {/* Moving Payment Icon */}
-             <motion.div 
-                 animate={{ x: ["-140%", "140%"] }}
-                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.2 }}
-                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 mt-1"
-             >
-                <div className="flex items-center gap-1.5 bg-teal-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white whitespace-nowrap">
-                   <span>$$$</span>
-                   <ArrowRight className="w-3 h-3" />
-                </div>
-             </motion.div>
+            {/* Moving Payment Icon */}
+            <motion.div
+              animate={{ x: ["-140%", "140%"] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.2 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 mt-1"
+            >
+              <div className="flex items-center gap-1.5 bg-teal-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow-lg border-2 border-white whitespace-nowrap">
+                <span>$$$</span>
+                <ArrowRight className="w-3 h-3" />
+              </div>
+            </motion.div>
           </div>
 
           {/* Merchant Bank */}
@@ -137,7 +137,7 @@ function HeroVisual() {
       </div>
 
       {/* Floating AI Badge (Bottom Right) */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
@@ -158,10 +158,10 @@ export function Hero() {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-        
+
         {/* Left Content */}
         <div className="lg:col-span-6 flex flex-col items-start text-left">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-sm font-medium border border-teal-100 mb-6"
@@ -173,7 +173,7 @@ export function Hero() {
             PayTo® + AI Reconciliation
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -182,7 +182,7 @@ export function Hero() {
             Payments shouldn’t cost you time and money.
           </motion.h1>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -191,33 +191,41 @@ export function Hero() {
             Replace high-fee, high-admin payment rails with PayTo® collections that settle in real time — and use cards as fallback or primary when your customers prefer.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
-            <Button size="lg" className="w-full sm:w-auto">Book a demo</Button>
-            <Button size="lg" variant="secondary" className="w-full sm:w-auto">Join the waitlist</Button>
+            <Button size="lg" className="w-full sm:w-auto" asChild>
+              <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
+                Book a demo
+              </a>
+            </Button>
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto" asChild>
+              <a href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=" target="_blank" rel="noopener noreferrer">
+                Join the waitlist
+              </a>
+            </Button>
           </motion.div>
 
           {/* Trust Bar (Mobile/Desktop embedded) */}
-          <motion.div 
-             initial={{ opacity: 0 }}
-             animate={{ opacity: 1 }}
-             transition={{ delay: 0.5 }}
-             className="mt-12 pt-8 border-t border-slate-100 w-full grid grid-cols-1 md:grid-cols-3 gap-6"
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-12 pt-8 border-t border-slate-100 w-full grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-             {[
-               { icon: ShieldCheck, text: "Bank-authorised agreements" },
-               { icon: Zap, text: "Real-time via NPP" },
-               { icon: CheckCircle2, text: "Richer data" },
-             ].map((item, i) => (
-               <div key={i} className="flex items-center gap-3 text-sm font-medium text-slate-500">
-                 <item.icon className="w-5 h-5 text-teal-600 shrink-0" />
-                 <span>{item.text}</span>
-               </div>
-             ))}
+            {[
+              { icon: ShieldCheck, text: "Bank-authorised agreements" },
+              { icon: Zap, text: "Real-time via NPP" },
+              { icon: CheckCircle2, text: "Richer data" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-3 text-sm font-medium text-slate-500">
+                <item.icon className="w-5 h-5 text-teal-600 shrink-0" />
+                <span>{item.text}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
 
