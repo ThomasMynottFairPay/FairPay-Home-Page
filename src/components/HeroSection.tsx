@@ -13,7 +13,7 @@ export function HeroSection() {
             </h1>
 
             <div className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-8 leading-relaxed">
-              <span className="text-indigo-600 font-semibold">FairPay</span> is the new way to collect funds.
+              <span className="text-indigo-600 font-bold">PayTo</span> is the new way to collect funds. <span className="text-indigo-600 font-bold">FairPay</span> is the platform that makes it
               <br className="hidden sm:block" />
               <span className="font-medium">Easy, Automated, Low-Cost</span>
             </div>
