@@ -34,14 +34,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h4 className="text-white font-semibold mb-6">Company</h4>
-          <ul className="space-y-4 text-sm">
-            <li><a href="#" className="hover:text-teal-400 transition-colors">About us</a></li>
-            <li><a href="#" className="hover:text-teal-400 transition-colors">Careers</a></li>
-            <li><a href="#" className="hover:text-teal-400 transition-colors">Blog</a></li>
-          </ul>
-        </div>
+
       </div>
 
       <div className="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
