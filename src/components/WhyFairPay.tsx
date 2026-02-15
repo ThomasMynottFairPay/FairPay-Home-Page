@@ -1,6 +1,6 @@
 import { ArrowRight, CreditCard, LayoutDashboard, Layers } from "lucide-react";
 import { Button } from "./ui/Button";
-import dashboardImg from "../assets/e287b9ddbc46fe69bea91b1706929aa1ae75360e.png";
+import dashboardImg from "../assets/dashboard-screenshot.png";
 
 export function WhyFairPay() {
   return (
