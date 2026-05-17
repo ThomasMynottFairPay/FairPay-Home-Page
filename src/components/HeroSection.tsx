@@ -3,19 +3,17 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50/50 to-white">
+    <section className="relative overflow-hidden bg-white text-slate-900 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side */}
           <div>
-            <h1 className="text-gray-900 mb-6 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-              Traditional payments cost you time & money
+            <h1 className="text-slate-900 mb-6 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
+              Payments built on a <span className="text-secondary">Fair Go.</span>
             </h1>
 
-            <div className="text-xl sm:text-2xl lg:text-3xl text-gray-600 mb-8 leading-relaxed">
-              <span className="text-indigo-600 font-bold">PayTo</span> is the new way to collect funds. <span className="text-indigo-600 font-bold">FairPay</span> is the platform that makes it
-              <br className="hidden sm:block" />
-              <span className="font-medium">Easy, Automated, Low-Cost</span>
+            <div className="text-xl sm:text-2xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
+              People helping people get paid what's fair. Fast, reliable, and straightforward for everyone.
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -23,13 +21,13 @@ export function HeroSection() {
                 href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-600/20 hover:shadow-xl hover:shadow-indigo-600/30 flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl font-semibold flex items-center justify-center gap-2"
               >
                 Join waitlist now
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="#calculator" className="px-6 py-3 bg-white text-indigo-600 border-2 border-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors flex items-center justify-center gap-2">
-                Calculate your savings
+              <a href="#how-it-works" className="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg hover:bg-slate-50 transition-colors font-semibold flex items-center justify-center gap-2">
+                See how it works
               </a>
             </div>
 
@@ -70,7 +68,7 @@ export function HeroSection() {
             <div className="relative z-10">
               {/* Mobile mockup */}
               <div className="bg-white rounded-3xl shadow-2xl p-6 max-w-sm mx-auto border border-gray-200">
-                <div className="aspect-[9/16] bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl p-6 flex flex-col">
+                <div className="aspect-[9/16] bg-gradient-to-br from-primary to-[#001f45] rounded-2xl p-6 flex flex-col">
                   <div className="flex items-center justify-between mb-8">
                     <div className="w-3 h-3 rounded-full bg-white/30"></div>
                     <div className="w-20 h-3 rounded-full bg-white/30"></div>
@@ -101,10 +99,10 @@ export function HeroSection() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-indigo-600" />
+                    <Zap className="w-5 h-5 text-secondary" />
                     <div>
                       <div className="text-xs text-gray-500">Settlement</div>
-                      <div className="text-indigo-600">Instant</div>
+                      <div className="text-secondary font-medium">Instant</div>
                     </div>
                   </div>
                 </div>
