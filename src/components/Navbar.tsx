@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 import { motion, AnimatePresence } from "motion/react";
+import { links as site } from "../content/site";
 
 const links = [
-  { name: "Product", href: "#product" },
-  { name: "Why PayTo", href: "#why-payto" },
-  { name: "AI + Reconciliation", href: "#ai" },
-  { name: "Use cases", href: "#use-cases" },
+  { name: "How it works", href: "#how-it-works" },
+  { name: "Products", href: "#products" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Resources", href: "#resources" },
+  { name: "Who it's for", href: "#use-cases" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export function Navbar() {
@@ -56,16 +56,16 @@ export function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist="
+            href={site.bookChat}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-slate-600 hover:text-teal-600"
           >
-            Join waitlist
+            Book a chat
           </a>
           <Button size="sm" asChild>
-            <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
-              Book a demo
+            <a href={site.join} target="_blank" rel="noopener noreferrer">
+              Become a member
             </a>
           </Button>
         </div>
@@ -101,13 +101,13 @@ export function Navbar() {
               ))}
               <div className="flex flex-col gap-3 mt-4">
                 <Button variant="secondary" className="w-full justify-center" asChild>
-                  <a href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=" target="_blank" rel="noopener noreferrer">
-                    Join waitlist
+                  <a href={site.bookChat} target="_blank" rel="noopener noreferrer">
+                    Book a chat
                   </a>
                 </Button>
                 <Button className="w-full justify-center" asChild>
-                  <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
-                    Book a demo
+                  <a href={site.join} target="_blank" rel="noopener noreferrer">
+                    Become a member
                   </a>
                 </Button>
               </div>

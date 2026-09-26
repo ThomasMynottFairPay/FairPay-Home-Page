@@ -15,7 +15,7 @@ export function Footer() {
             </span>
           </div>
           <p className="text-sm leading-relaxed mb-6">
-            Modern payments infrastructure for Australian businesses. Built for speed, clarity, and control.
+            Pooling the payment volume of Australian small businesses and not-for-profits into real buying power. Built on Stripe.
           </p>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/company/fairpay-ai/" target="_blank" rel="noopener noreferrer">
@@ -27,10 +27,10 @@ export function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-6">Product</h4>
           <ul className="space-y-4 text-sm">
-            <li><a href="#" className="hover:text-teal-400 transition-colors">Features</a></li>
-            <li><a href="#" className="hover:text-teal-400 transition-colors">PayTo vs Cards</a></li>
-            <li><a href="#" className="hover:text-teal-400 transition-colors">AI Reconciliation</a></li>
-            <li><a href="#" className="hover:text-teal-400 transition-colors">Pricing</a></li>
+            <li><a href="#how-it-works" className="hover:text-teal-400 transition-colors">How it works</a></li>
+            <li><a href="#products" className="hover:text-teal-400 transition-colors">Products</a></li>
+            <li><a href="#pricing" className="hover:text-teal-400 transition-colors">Pricing</a></li>
+            <li><a href="#faq" className="hover:text-teal-400 transition-colors">FAQ</a></li>
           </ul>
         </div>
 
@@ -41,7 +41,7 @@ export function Footer() {
         <p>© 2026 FairPay Pty Ltd. All rights reserved.</p>
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-4 text-[10px] text-slate-600 text-center md:text-left">
-        PayTo® and PayID® are registered trademarks of NPP Australia Ltd.
+        PayTo® and PayID® are registered trademarks of NPP Australia Ltd. Stripe is a trademark of Stripe, Inc.
       </div>
     </footer>
   );

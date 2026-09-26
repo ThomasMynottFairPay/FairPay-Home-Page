@@ -2,12 +2,12 @@ import { Briefcase, Building2, Globe, GraduationCap, Heart, Users } from "lucide
 
 export function UseCases() {
   const cases = [
-    { icon: Users, title: "Memberships & subscriptions" },
-    { icon: GraduationCap, title: "Education fees & programs" },
-    { icon: Heart, title: "Donations & community giving" },
+    { icon: Heart, title: "Charities & community groups" },
+    { icon: Users, title: "Clubs, associations & memberships" },
+    { icon: GraduationCap, title: "Schools, tutoring & programs" },
+    { icon: Briefcase, title: "Professional services & trades" },
     { icon: Building2, title: "Property, strata & facilities" },
-    { icon: Briefcase, title: "Professional services retainers" },
-    { icon: Globe, title: "Any recurring payment needs" },
+    { icon: Globe, title: "Any small business under $2M" },
   ];
 
   return (
@@ -15,7 +15,7 @@ export function UseCases() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Built for recurring payments — great for one-offs too.
+            Made for small businesses and not-for-profits.
           </h2>
         </div>
 
