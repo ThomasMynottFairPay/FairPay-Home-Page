@@ -8,14 +8,14 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #002D62;
+  --primary: #0A7A67;
   --primary-foreground: #ffffff;
-  --secondary: #FDB913;
-  --secondary-foreground: #0f172a;
+  --secondary: #ffffff;
+  --secondary-foreground: #0B1B2E;
   --muted: #ececf0;
   --muted-foreground: #717182;
   --accent: #e9ebef;
-  --accent-foreground: #002D62;
+  --accent-foreground: #0B1B2E;
   --destructive: #E31837;
   --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
@@ -30,7 +30,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 0.5rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: #030213;
@@ -178,4 +178,52 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+}
+
+/* FairPay design system (see DESIGN.md). */
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-ink: #0B1B2E;          /* headings, primary text, dark sections */
+  --color-ink-soft: #1B2B40;     /* raised surfaces on dark */
+  --color-body: #4A5B70;         /* paragraph text */
+  --color-subtle: #5F6E80;       /* captions, meta (AA: 5.2:1 white, 4.9:1 canvas, 4.7:1 brand-tint) */
+  --color-line: #E4E9F0;         /* hairlines, card borders */
+  --color-line-dark: #26384F;    /* hairlines on dark */
+  --color-canvas: #F6F8FB;       /* alternate section background */
+
+  --color-brand: #0A7A67;        /* buttons, links (white text AA) */
+  --color-brand-deep: #06594B;   /* hover */
+  --color-brand-bright: #19D3AE; /* highlights on dark, progress fill */
+  --color-brand-tint: #E6F7F2;   /* soft brand wash */
+
+  --color-sky: #3D8BFD;          /* gradient stops */
+  --color-violet: #7B61FF;
+  --color-coral: #FF8A5B;
+  --color-sun: #FFC857;
+
+  --shadow-card: 0 1px 1px rgba(11,27,46,0.04), 0 8px 24px -8px rgba(11,27,46,0.12);
+  --shadow-float: 0 2px 4px rgba(11,27,46,0.04), 0 24px 48px -16px rgba(11,27,46,0.24);
+}
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body { font-family: var(--font-sans); color: var(--color-ink); font-feature-settings: "ss01", "cv11"; }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+/* Soft multi-stop gradient used for hero mesh and accent panels. */
+.fp-mesh {
+  background:
+    radial-gradient(40% 55% at 78% 22%, rgba(25,211,174,0.55), transparent 70%),
+    radial-gradient(38% 50% at 92% 48%, rgba(61,139,253,0.45), transparent 70%),
+    radial-gradient(34% 45% at 66% 60%, rgba(123,97,255,0.35), transparent 70%),
+    radial-gradient(30% 40% at 96% 8%, rgba(255,138,91,0.35), transparent 70%);
+}
+.fp-panel-gradient {
+  background: linear-gradient(135deg, #19D3AE 0%, #3D8BFD 52%, #7B61FF 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
