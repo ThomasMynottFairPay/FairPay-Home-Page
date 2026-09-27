@@ -1,5 +1,5 @@
 import { ButtonLink, Container, Headline, Reveal, Section } from "./kit";
-import { community, founding, formatAud, links } from "../content/site";
+import { community, founding, formatAud, joinLink, links } from "../content/site";
 
 /**
  * One restrained teal glow from the top edge. The violet/sky mesh stays unique to the hero,
@@ -27,7 +27,7 @@ export function CTAStrip() {
             </p>
 
             <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <ButtonLink href={links.join} external variant="light" className="focus-visible:outline-white">
+              <ButtonLink href={joinLink("Bottom banner")} external variant="light" className="focus-visible:outline-white">
                 Become a founding member
                 <span className="sr-only"> (opens in a new tab)</span>
               </ButtonLink>

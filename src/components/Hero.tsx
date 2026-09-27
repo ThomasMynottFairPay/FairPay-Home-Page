@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, animate, motion, useInView, useReducedMotion } from "motion/react";
 import { Bell, Check, ChevronRight, CreditCard, FileText, Handshake, House, Search, Users } from "lucide-react";
 import { BrowserFrame, ButtonLink, Container, Headline, MethodMark, PhoneFrame, Pill, Reveal, Section } from "./kit";
-import { links } from "../content/site";
+import { joinLink } from "../content/site";
 import { cn } from "./ui/Utils";
 
 /* ---------- Illustrative mockup data (fictional club, fictional people) ---------- */
@@ -523,7 +523,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={0.15}>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <ButtonLink href={links.join} external className="whitespace-nowrap">
+                <ButtonLink href={joinLink("Hero")} external className="whitespace-nowrap">
                   Become a founding member
                   <span className="sr-only"> (opens in a new tab)</span>
                 </ButtonLink>

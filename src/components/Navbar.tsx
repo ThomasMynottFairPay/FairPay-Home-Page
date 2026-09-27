@@ -3,7 +3,7 @@ import { ChevronRight, Menu, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ButtonLink, Container } from "./kit";
 import { cn } from "./ui/Utils";
-import { links as site } from "../content/site";
+import { joinLink, links as site } from "../content/site";
 
 const navLinks = [
   { name: "How it works", id: "how-it-works" },
@@ -195,7 +195,7 @@ export function Navbar() {
             Book a chat
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
-          <ButtonLink href={site.join} external className="hidden h-9 px-4 text-[14px] sm:inline-flex">
+          <ButtonLink href={joinLink("Nav")} external className="hidden h-9 px-4 text-[14px] sm:inline-flex">
             Become a member
             <span className="sr-only"> (opens in a new tab)</span>
           </ButtonLink>
@@ -248,7 +248,7 @@ export function Navbar() {
                     ))}
                   </ul>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    <ButtonLink href={site.join} external className="w-full">
+                    <ButtonLink href={joinLink("Mobile menu")} external className="w-full">
                       Become a member
                       <span className="sr-only"> (opens in a new tab)</span>
                     </ButtonLink>

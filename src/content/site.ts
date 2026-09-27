@@ -1,7 +1,16 @@
 // Single source for figures and links used across the page.
 
+// Sign-ups go to this Monday.com form, which adds each one to the "Waitlist Submissions" board.
+const signupForm = "https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2";
+
+/**
+ * Sign-up link tagged with the button it came from. The form saves its `waitlist`
+ * URL parameter into the board's hidden "waitlist" column, e.g. "Home page - Pricing - Connected".
+ */
+export const joinLink = (source: string) =>
+  `${signupForm}&waitlist=${encodeURIComponent(`Home page - ${source}`)}`;
+
 export const links = {
-  join: "https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=",
   bookChat: "https://calendly.com/thomas-fairpay-ai/30min",
   linkedin: "https://www.linkedin.com/company/fairpay-ai/",
 };

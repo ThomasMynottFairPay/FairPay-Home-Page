@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Check, ChevronRight } from "lucide-react";
 import { ButtonLink, Container, Eyebrow, Headline, MethodMark, Pill, Reveal, Section } from "./kit";
-import { community, founding, formatAud, links, plans, rates } from "../content/site";
+import { community, founding, formatAud, joinLink, links, plans, rates } from "../content/site";
 import { cn } from "./ui/Utils";
 
 /* ---------- Helpers ---------- */
@@ -64,7 +64,7 @@ function PlanColumn({ plan }: { plan: Plan }) {
       </div>
 
       <div className="mt-8">
-        <ButtonLink href={links.join} external variant={featured ? "primary" : "secondary"} className="w-full">
+        <ButtonLink href={joinLink(`Pricing - ${plan.name}`)} external variant={featured ? "primary" : "secondary"} className="w-full">
           {paid ? "Get started" : "Start free"}
           <span className="sr-only"> with {plan.name}</span>
           <NewTab />
@@ -450,7 +450,7 @@ export function Pricing() {
                 Founding members also get {founding.freePlanMonths} months of Connected free (worth{" "}
                 <span className="tabular">{formatAud(founding.freePlanValueAud)}</span>).{" "}
                 <a
-                  href={links.join}
+                  href={joinLink("Pricing footnote")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-0.5 whitespace-nowrap rounded-sm font-medium text-brand hover:text-brand-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"

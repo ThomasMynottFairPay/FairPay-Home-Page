@@ -2,7 +2,7 @@ import { Check, Flag } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { ButtonLink, Container, Eyebrow, Headline, Pill, Reveal, Section } from "./kit";
 import { cn } from "./ui/Utils";
-import { community, founding, formatAud, links } from "../content/site";
+import { community, founding, formatAud, joinLink } from "../content/site";
 
 /** Minor ticks on the ruler; every fifth is a major tick at a milestone. */
 const TICKS = 20;
@@ -186,7 +186,7 @@ function FoundingOffer() {
       </ul>
 
       <div className="mt-auto pt-7">
-        <ButtonLink href={links.join} external className="w-full">
+        <ButtonLink href={joinLink("Founding offer")} external className="w-full">
           Claim founding membership
           <span className="sr-only"> (opens in a new tab)</span>
         </ButtonLink>

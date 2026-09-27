@@ -2,7 +2,7 @@ import { ArrowUp, ArrowUpRight, Linkedin } from "lucide-react";
 import { Container, GuideLines } from "./kit";
 import { Wordmark } from "./Navbar";
 import { cn } from "./ui/Utils";
-import { links } from "../content/site";
+import { joinLink, links } from "../content/site";
 
 type FooterLink = { label: string; href: string; external?: boolean; icon?: typeof Linkedin };
 
@@ -19,7 +19,7 @@ const columns: { title: string; items: FooterLink[] }[] = [
   {
     title: "Get started",
     items: [
-      { label: "Become a founding member", href: links.join, external: true },
+      { label: "Become a founding member", href: joinLink("Footer"), external: true },
       { label: "Book a chat", href: links.bookChat, external: true },
     ],
   },
