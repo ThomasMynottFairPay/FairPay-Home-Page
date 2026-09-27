@@ -101,9 +101,13 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close on Escape, close when resizing up to desktop, and lock page scroll while open.
+  // Close on Escape, when focus leaves the header, or when resizing up to desktop; lock page scroll while open.
   useEffect(() => {
     if (!open) return;
+    const onFocusIn = (e: FocusEvent) => {
+      const header = toggleRef.current?.closest("header");
+      if (header && e.target instanceof Node && !header.contains(e.target)) setOpen(false);
+    };
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
@@ -113,11 +117,13 @@ export function Navbar() {
     const mq = window.matchMedia("(min-width: 1024px)");
     const onMq = () => mq.matches && setOpen(false);
     document.addEventListener("keydown", onKey);
+    document.addEventListener("focusin", onFocusIn);
     mq.addEventListener("change", onMq);
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
+      document.removeEventListener("focusin", onFocusIn);
       mq.removeEventListener("change", onMq);
       document.body.style.overflow = prevOverflow;
     };
