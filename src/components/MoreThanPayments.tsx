@@ -941,15 +941,15 @@ export function MoreThanPayments() {
         </div>
 
         <Reveal delay={0.1} className="mt-12 md:mt-16">
-          {/* Segmented control. One row at every width: on phones it scrolls sideways to the screen edge. */}
+          {/* Segmented control. Two by two on phones so every tab is visible; one row from `sm` up. */}
           <div
             ref={scrollerRef}
-            className="-mx-5 overflow-x-auto px-5 [scrollbar-width:none] md:mx-0 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden"
+            className="sm:-mx-5 sm:overflow-x-auto sm:px-5 [scrollbar-width:none] md:mx-0 md:overflow-visible md:px-0 [&::-webkit-scrollbar]:hidden"
           >
             <div
               role="tablist"
               aria-label="What FairPay adds"
-              className="flex w-max gap-0.5 rounded-[10px] bg-white/[0.04] p-1 ring-1 ring-inset ring-line-dark"
+              className="grid w-full grid-cols-2 gap-0.5 rounded-[10px] bg-white/[0.04] p-1 ring-1 ring-inset ring-line-dark sm:flex sm:w-max"
             >
               {TABS.map((tab, i) => {
                 const selected = i === active;
