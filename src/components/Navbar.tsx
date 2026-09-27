@@ -155,7 +155,7 @@ export function Navbar() {
         )}
       >
       <Container className="flex h-16 items-center">
-        <a href="#" aria-label="FairPay, back to top" className={cn("-m-1 rounded-md p-1", focusRing)}>
+        <a href="#" onClick={() => setOpen(false)} aria-label="FairPay, back to top" className={cn("-m-1 rounded-md p-1", focusRing)}>
           <Wordmark />
         </a>
 

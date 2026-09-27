@@ -123,6 +123,7 @@ const FEE_ROWS: FeeRow[] = [
     marks: ["PayTo"],
     standard: rate(rates.payto.stripePct + rates.fairpayMarginPct, rates.payto.fixedCents),
     foundingRate: rate(rates.payto.stripePct, rates.payto.fixedCents),
+    note: `Founding rate capped at $${rates.payto.stripeCapAud.toFixed(2)} per payment`,
   },
 ];
 

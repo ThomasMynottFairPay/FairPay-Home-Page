@@ -449,7 +449,7 @@ function HeroComposition() {
           (phone 216px = offset + 152px sidebar). At lg the phone is hidden, so nothing hangs below. */}
       <div className="relative hidden pb-28 pl-16 md:block lg:pb-0 lg:pl-0 xl:pb-28 xl:pl-10">
         <BrowserFrame
-          url="app.fairpay.com.au"
+          url="app.fairpay-ai.com"
           className="w-full xl:max-[1359px]:w-[calc(100%+3rem)] min-[1360px]:w-[calc(100%+6rem)]"
         >
           <Dashboard rows={rows} volume={stats.volume} count={stats.count} />

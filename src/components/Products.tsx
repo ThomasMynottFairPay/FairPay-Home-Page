@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type RefObject } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
 import { BookOpen, Check, ChevronDown, ChevronLeft, GraduationCap, Mail } from "lucide-react";
 import { BrowserFrame, ButtonLink, Container, Eyebrow, Headline, MethodMark, PhoneFrame, Pill, Reveal, Section, Tile } from "./kit";
-import { rates } from "../content/site";
+import { founding, rates } from "../content/site";
 import { cn } from "./ui/Utils";
 
 /* ---------- Helpers ---------- */
@@ -348,8 +348,12 @@ function PayToTile() {
             <dd className="font-mono text-ink tabular">{pct(rates.payto.stripePct + rates.fairpayMarginPct)} + {rates.payto.fixedCents}c</dd>
           </div>
           <div className="flex items-center justify-between gap-4 py-2.5">
-            <dt className="text-body">Founding members</dt>
+            <dt className="text-body">Founding members, first {founding.marginFreeYears} years</dt>
             <dd className="font-mono text-brand tabular">{pct(rates.payto.stripePct)} + {rates.payto.fixedCents}c</dd>
+          </div>
+          <div className="flex items-center justify-between gap-4 py-2.5">
+            <dt className="text-body">Founding rate capped at</dt>
+            <dd className="font-mono text-brand tabular">{aud(rates.payto.stripeCapAud)} per payment</dd>
           </div>
         </Facts>
       </div>

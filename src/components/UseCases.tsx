@@ -498,7 +498,7 @@ const CAFE_POOL: { desc: string; method: Method; amount: number }[] = [
   { desc: "3 × cappuccino", method: "Visa", amount: 16.5 },
   { desc: "Soup of the day", method: "Google Pay", amount: 14 },
   { desc: "Toastie, OJ", method: "Apple Pay", amount: 17.8 },
-  { desc: "Catering order, online", method: "PayTo", amount: 168 },
+  { desc: "Catering order", method: "PayTo", amount: 168 },
 ];
 
 const HOURLY = [14, 38, 64, 82, 56, 44, 70];
@@ -686,7 +686,7 @@ export function UseCases() {
           <Reveal delay={0.06} className={cn(PAIR, "md:col-span-2 lg:col-span-7")}>
             <CaseTile
               title="Any small business"
-              detail="Everyday sales by card, digital wallet or PayTo, from the first coffee of the day."
+              detail="Online orders and pre-orders by card, digital wallet or PayTo."
               label="Illustrative sales dashboard for Harbour Street Café with a live feed of card and wallet payments"
             >
               <CafeDashboard />
