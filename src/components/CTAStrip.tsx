@@ -1,28 +1,50 @@
-import { Button } from "./ui/Button";
+import { ButtonLink, Container, Headline, Reveal, Section } from "./kit";
+import { community, founding, formatAud, joinLink, links } from "../content/site";
+
+/**
+ * One restrained teal glow from the top edge. The violet/sky mesh stays unique to the hero,
+ * and the page's single `.fp-panel-gradient` accent lives in Products.
+ */
+const INK_GLOW: React.CSSProperties = {
+  background: "radial-gradient(60% 70% at 50% 0%, rgba(25,211,174,0.22), transparent 70%)",
+};
 
 export function CTAStrip() {
   return (
-    <section className="py-24 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
-          Ready to make payments faster, cheaper, and easier to reconcile?
-        </h2>
-        <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-          See how FairPay brings PayTo®, cards, and AI-powered operations together — so your team spends less time chasing payments.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size="lg" asChild>
-            <a href="https://calendly.com/thomas-fairpay-ai/30min" target="_blank" rel="noopener noreferrer">
-              Book a demo
-            </a>
-          </Button>
-          <Button size="lg" variant="secondary" asChild>
-            <a href="https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=" target="_blank" rel="noopener noreferrer">
-              Join the waitlist
-            </a>
-          </Button>
-        </div>
-      </div>
-    </section>
+    <Section tone="white" className="pb-24 pt-4 md:pb-32 md:pt-8">
+      <Container>
+        <Reveal>
+          <div className="relative isolate overflow-hidden rounded-2xl bg-ink px-6 py-20 text-center ring-1 ring-white/10 sm:px-10 md:px-16 md:py-28">
+            <div aria-hidden className="pointer-events-none absolute inset-0 -z-10" style={INK_GLOW} />
+
+            <Headline
+              dark
+              lead="The more of us, the better the deal."
+              className="mx-auto max-w-[760px] text-[36px] leading-[1.05] sm:text-[44px] md:text-[56px]"
+            />
+            <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.6] text-white/75">
+              Join the FairPay community as a founding member, or book a chat to see if FairPay is right for you.
+            </p>
+
+            <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <ButtonLink href={joinLink("Bottom banner")} external variant="light" className="focus-visible:outline-white">
+                Become a founding member
+                <span className="sr-only"> (opens in a new tab)</span>
+              </ButtonLink>
+              <ButtonLink href={links.bookChat} external variant="ghostDark" className="focus-visible:outline-white">
+                Book a chat
+                <span className="sr-only"> (opens in a new tab)</span>
+              </ButtonLink>
+            </div>
+
+            <p className="mx-auto mt-8 max-w-[640px] text-[14px] leading-[1.6] text-white/60 text-balance">
+              Join before the community reaches{" "}
+              <span className="text-white/85 tabular">{formatAud(community.firstGoalAud)}</span> and pay no FairPay margin
+              for your first <span className="text-white/85 tabular">{founding.marginFreeYears}</span> years.
+            </p>
+          </div>
+        </Reveal>
+      </Container>
+    </Section>
   );
 }

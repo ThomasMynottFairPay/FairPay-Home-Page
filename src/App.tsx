@@ -1,12 +1,12 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import { CommunityProgress } from "./components/CommunityProgress";
 import { ProblemSection } from "./components/ProblemSection";
-import { WhyPayTo } from "./components/WhyPayTo";
-import { WhyFairPay } from "./components/WhyFairPay";
-import { AISection } from "./components/AISection";
 import { HowItWorks } from "./components/HowItWorks";
+import { Products } from "./components/Products";
+import { MoreThanPayments } from "./components/MoreThanPayments";
+import { Pricing } from "./components/Pricing";
 import { UseCases } from "./components/UseCases";
-import { WhyNow } from "./components/WhyNow";
 import { FAQ } from "./components/FAQ";
 import { CTAStrip } from "./components/CTAStrip";
 import { Footer } from "./components/Footer";
@@ -17,13 +17,13 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <CommunityProgress />
         <ProblemSection />
-        <WhyPayTo />
-        <WhyFairPay />
-        <AISection />
         <HowItWorks />
+        <Products />
+        <MoreThanPayments />
+        <Pricing />
         <UseCases />
-        <WhyNow />
         <FAQ />
         <CTAStrip />
       </main>
