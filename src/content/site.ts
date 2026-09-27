@@ -1,5 +1,4 @@
 // Single source for figures and links used across the page.
-// Anything marked PLACEHOLDER is waiting on a decision and renders visibly as a placeholder.
 
 export const links = {
   join: "https://forms.monday.com/forms/f0983dc8fc193913bbc6a34a60df7d5b?r=apse2&waitlist=",
@@ -8,7 +7,8 @@ export const links = {
 };
 
 // Community volume shown on the progress bar. Must be the real processed total.
-// PLACEHOLDER: set `processedAud` and `updatedOn` (e.g. "26 September 2026") to show real figures.
+// While `processedAud` is null the bar shows the goal only; set it and `updatedOn`
+// (e.g. "26 September 2026") to show real progress.
 export const community = {
   processedAud: null as number | null,
   updatedOn: null as string | null,
@@ -53,15 +53,6 @@ export const plans = [
     features: ["Everything in Connected", "Onshore support, 7 days a week"],
   },
 ];
-
-// PLACEHOLDER: decisions still open.
-export const placeholders = {
-  gst: "[Placeholder: incl. or excl. GST]",
-  paytoCap: "[Placeholder: PayTo cap]",
-  invoicingFee: "[Placeholder: how invoicing fees work]",
-  fundsFlow:
-    "[Placeholder: how payments are processed by Stripe and paid out to your bank account]",
-};
 
 export const formatAud = (n: number) =>
   n.toLocaleString("en-AU", { style: "currency", currency: "AUD", maximumFractionDigits: 0 });

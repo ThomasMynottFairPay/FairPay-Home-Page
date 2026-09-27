@@ -2,13 +2,13 @@ import { useEffect, useRef, useState, type RefObject } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "motion/react";
 import { BookOpen, Check, ChevronDown, ChevronLeft, GraduationCap, Mail } from "lucide-react";
 import { BrowserFrame, ButtonLink, Container, Eyebrow, Headline, MethodMark, PhoneFrame, Pill, Reveal, Section, Tile } from "./kit";
-import { Placeholder } from "./Placeholder";
-import { placeholders, rates } from "../content/site";
+import { rates } from "../content/site";
 import { cn } from "./ui/Utils";
 
 /* ---------- Helpers ---------- */
 
 // Mockup amounts show cents, like real payment software.
+const pct = (n: number) => `${Number(n.toFixed(2))}%`;
 const aud = (n: number) =>
   n.toLocaleString("en-AU", { style: "currency", currency: "AUD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
@@ -344,16 +344,12 @@ function PayToTile() {
         <TileHead title="PayTo.">Pay by bank, straight from your customer's account.</TileHead>
         <Facts className="md:mt-auto lg:mt-6">
           <div className="flex items-center justify-between gap-4 py-2.5">
-            <dt className="text-body">
-              Stripe's PayTo fee cap <span className="text-subtle">per payment</span>
-            </dt>
-            <dd className="font-mono text-ink tabular">{aud(rates.payto.stripeCapAud)}</dd>
+            <dt className="text-body">Standard rate</dt>
+            <dd className="font-mono text-ink tabular">{pct(rates.payto.stripePct + rates.fairpayMarginPct)} + {rates.payto.fixedCents}c</dd>
           </div>
           <div className="flex items-center justify-between gap-4 py-2.5">
-            <dt className="shrink-0 text-body">FairPay fee cap</dt>
-            <dd className="text-right">
-              <Placeholder>{placeholders.paytoCap}</Placeholder>
-            </dd>
+            <dt className="text-body">Founding members</dt>
+            <dd className="font-mono text-brand tabular">{pct(rates.payto.stripePct)} + {rates.payto.fixedCents}c</dd>
           </div>
         </Facts>
       </div>

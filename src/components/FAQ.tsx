@@ -1,8 +1,7 @@
 import { ChevronRight, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/Accordion";
-import { Placeholder } from "./Placeholder";
 import { Container, Eyebrow, Headline, Reveal, Section } from "./kit";
-import { community, founding, formatAud, links, placeholders, rates } from "../content/site";
+import { community, founding, formatAud, links, rates } from "../content/site";
 
 export function FAQ() {
   const goal = formatAud(community.firstGoalAud);
@@ -18,10 +17,6 @@ export function FAQ() {
     {
       q: "What do founding members get?",
       a: `If you join before our community reaches ${goal}, we waive our ${rates.fairpayMarginPct}% margin for your first ${founding.marginFreeYears} years, so you pay Stripe's standard rate and nothing more. You also get ${founding.freePlanMonths} months of our Connected plan free (worth ${formatAud(founding.freePlanValueAud)}), and every community discount we unlock along the way.`,
-    },
-    {
-      q: "Who processes my payments? Does FairPay hold my money?",
-      a: <Placeholder>{placeholders.fundsFlow}</Placeholder>,
     },
     {
       q: "Which payment types can I accept?",

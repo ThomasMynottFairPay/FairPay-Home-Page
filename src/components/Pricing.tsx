@@ -2,8 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Check, ChevronRight } from "lucide-react";
 import { ButtonLink, Container, Eyebrow, Headline, MethodMark, Pill, Reveal, Section } from "./kit";
-import { Placeholder } from "./Placeholder";
-import { community, founding, formatAud, links, placeholders, plans, rates } from "../content/site";
+import { community, founding, formatAud, links, plans, rates } from "../content/site";
 import { cn } from "./ui/Utils";
 
 /* ---------- Helpers ---------- */
@@ -52,9 +51,8 @@ function PlanColumn({ plan }: { plan: Plan }) {
             <span className="sr-only">per month</span>
           </span>
         </p>
-        {(paid || featured) && (
+        {featured && (
           <div className="mt-4 flex flex-col items-start gap-2 text-[12.5px] leading-snug">
-            {paid && <Placeholder>{placeholders.gst}</Placeholder>}
             {featured && (
               <p className="inline-flex items-center gap-2 rounded-md bg-brand-tint px-2 py-1 font-medium text-brand-deep ring-1 ring-brand/15">
                 <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
@@ -123,14 +121,8 @@ const FEE_ROWS: FeeRow[] = [
   {
     type: "PayTo",
     marks: ["PayTo"],
-    note: placeholders.paytoCap,
     standard: rate(rates.payto.stripePct + rates.fairpayMarginPct, rates.payto.fixedCents),
     foundingRate: rate(rates.payto.stripePct, rates.payto.fixedCents),
-  },
-  {
-    type: "Invoicing",
-    marks: [],
-    pending: placeholders.invoicingFee,
   },
 ];
 
@@ -149,7 +141,7 @@ function RowIdentity({ row }: { row: FeeRow }) {
       )}
       {row.note && (
         <span className="mt-2.5 block text-[12px] leading-snug">
-          <Placeholder>{row.note}</Placeholder>
+          {row.note}
         </span>
       )}
     </>
@@ -166,7 +158,7 @@ function FeeList() {
           <RowIdentity row={row} />
           {row.pending ? (
             <p className="mt-4 text-[12.5px] leading-snug">
-              <Placeholder>{row.pending}</Placeholder>
+              {row.pending}
             </p>
           ) : (
             <dl className="mt-4 space-y-1.5">
@@ -240,7 +232,7 @@ function FeeTable() {
               </th>
               {row.pending ? (
                 <td colSpan={2} className={cn(rule, cellX, "py-5 align-top text-[12.5px] leading-snug")}>
-                  <Placeholder>{row.pending}</Placeholder>
+                  {row.pending}
                 </td>
               ) : (
                 <>
@@ -447,7 +439,12 @@ export function Pricing() {
               <p className="mt-6 max-w-[62ch] text-[13px] leading-[1.6] text-subtle">
                 Rates are for domestic payments and apply to all plans. Founding member rates apply for{" "}
                 {founding.marginFreeYears} years from joining, for members who join before the community reaches{" "}
-                <span className="tabular">{formatAud(community.firstGoalAud)}</span>.
+                <span className="tabular">{formatAud(community.firstGoalAud)}</span>. Invoicing is included in every
+                plan;{" "}
+                <a href={links.bookChat} target="_blank" rel="noopener noreferrer" className="underline decoration-line underline-offset-2 hover:text-ink">
+                  ask us about invoicing fees
+                </a>
+                .
               </p>
               <p className="mt-5 max-w-[62ch] text-[15px] leading-[1.55] text-body">
                 Founding members also get {founding.freePlanMonths} months of Connected free (worth{" "}

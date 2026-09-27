@@ -10,7 +10,7 @@ Reference feel: stripe.com/au and airwallex.com/en-au. Polished fintech, calm an
 5. **Rhythm.** Sections `py-24 md:py-32`. Alternate `white` → `canvas`; one `ink` (dark) section for contrast (More than payments), plus the community band. Content lives in `Container` (1200px) with `GuideLines` hairlines.
 6. **Asymmetry.** Prefer 5/7 or 7/5 splits and bento grids with mixed spans over centred stacks of three equal cards. Centre-aligned text only for the closing CTA.
 7. **Motion is quiet.** `Reveal` fade-rise on view; small looping motion only inside mockups (a payment row arriving, a progress fill). Respect reduced motion.
-8. **Honest data.** Mockup data is illustrative (fictional clubs, cafés, charities, AUD amounts). Never show a fake community total, fake customer logos, testimonials or savings figures. Rates only from `src/content/site.ts`. Placeholders stay visible via `<Placeholder>`.
+8. **Honest data.** Mockup data is illustrative (fictional clubs, cafés, charities, AUD amounts). Never show a fake community total, fake customer logos, testimonials or savings figures. Rates only from `src/content/site.ts`. Unconfirmed figures are left off the page rather than shown as placeholders.
 
 ## Tokens (Tailwind classes)
 - Text: `text-ink` headings, `text-body` paragraphs, `text-subtle` captions.
