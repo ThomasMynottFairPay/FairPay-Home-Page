@@ -24,13 +24,13 @@ const focusRing =
  * Geometry matches the brand master (166 x 88).
  */
 export function FairPayMark({ dark = false, className }: { dark?: boolean; className?: string }) {
-  const fill = dark ? "#A0E3C0" : "#1D5A45";
+  const fill = dark ? "#9FE3C0" : "#0E3B2E";
   return (
     <svg
       viewBox="0 0 166 88"
       aria-hidden="true"
       focusable="false"
-      className={cn("h-[20px] w-auto shrink-0", className)}
+      className={cn("h-[19px] w-auto shrink-0", className)}
     >
       <g fill={fill}>
         <circle cx="9" cy="44" r="9" />
@@ -45,12 +45,12 @@ export function FairPayMark({ dark = false, className }: { dark?: boolean; class
 /** Mark plus text wordmark. Shared with the footer. */
 export function Wordmark({ dark = false, className }: { dark?: boolean; className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2", className)}>
+    <span className={cn("inline-flex items-center gap-[7px]", className)}>
       <FairPayMark dark={dark} />
       <span
         className={cn(
-          "text-[19px] font-semibold leading-none tracking-[-0.035em]",
-          dark ? "text-white" : "text-ink",
+          "text-[24px] font-extrabold leading-none tracking-[-0.03em]",
+          dark ? "text-paper" : "text-ink",
         )}
       >
         FairPay
@@ -207,7 +207,7 @@ export function Navbar() {
             Book a chat
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
-          <ButtonLink href={joinLink("Nav")} external className="hidden h-9 px-4 text-[14px] sm:inline-flex">
+          <ButtonLink href={joinLink("Nav")} external className="hidden h-10 px-5 text-[15px] sm:inline-flex">
             Become a member
             <span className="sr-only"> (opens in a new tab)</span>
           </ButtonLink>

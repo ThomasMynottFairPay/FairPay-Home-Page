@@ -56,7 +56,7 @@ function ExternalLabel({ label }: { label: string }) {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-line-dark bg-ink text-white">
+    <footer className="relative overflow-hidden border-t border-line-dark bg-forest-950 text-paper">
       <GuideLines dark />
       <Container className="pb-10 pt-20 md:pt-24">
         <h2 className="sr-only">Footer</h2>
@@ -73,7 +73,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 md:col-span-8">
             {columns.map((col) => (
               <nav key={col.title} aria-labelledby={`footer-${slug(col.title)}`}>
-                <h3 id={`footer-${slug(col.title)}`} className="text-[13px] font-medium leading-none text-white">
+                <h3 id={`footer-${slug(col.title)}`} className="text-[13px] font-bold leading-none text-white">
                   {col.title}
                 </h3>
                 <ul className="mt-5 space-y-3.5">

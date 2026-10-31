@@ -31,19 +31,19 @@ function PlanColumn({ plan }: { plan: Plan }) {
     <div
       className={cn(
         "relative flex flex-col px-6 py-8 sm:px-8 md:row-span-4 md:grid md:grid-rows-subgrid md:gap-0 md:px-6 lg:px-9 lg:py-10",
-        featured && "bg-[linear-gradient(180deg,rgba(230,247,242,0.75)_0%,rgba(230,247,242,0)_42%)]",
+        featured && "bg-[linear-gradient(180deg,rgba(221,245,232,0.75)_0%,rgba(221,245,232,0)_42%)]",
       )}
     >
       {featured && <span aria-hidden className="absolute inset-x-0 top-0 h-[3px] bg-brand" />}
 
       <div>
-        <h3 className="text-[17px] font-medium leading-snug tracking-[-0.015em] text-ink">{plan.name}</h3>
+        <h3 className="text-[17px] font-extrabold leading-snug tracking-[-0.015em] text-ink">{plan.name}</h3>
         <p className="mt-2 max-w-[32ch] text-[14.5px] leading-[1.55] text-body">{plan.blurb}</p>
       </div>
 
       <div className="mt-8">
         <p className="flex items-baseline gap-1.5">
-          <span className="tabular text-[44px] font-medium leading-none tracking-[-0.045em] text-ink lg:text-[52px]">
+          <span className="tabular text-[44px] font-extrabold leading-none tracking-[-0.045em] text-ink lg:text-[52px]">
             {formatAud(plan.priceAud)}
           </span>
           <span className="text-[15px] text-subtle">
@@ -314,7 +314,7 @@ function FeeBreakdown() {
   const toggle = (active: boolean) =>
     cn(
       "inline-flex h-8 flex-1 items-center justify-center whitespace-nowrap rounded-[5px] px-3 text-[12.5px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand sm:flex-none",
-      active ? "bg-white text-ink shadow-[0_1px_2px_rgba(11,27,46,0.08)] ring-1 ring-line" : "text-body hover:text-ink",
+      active ? "bg-white text-ink shadow-[0_1px_2px_rgba(14,59,46,0.08)] ring-1 ring-line" : "text-body hover:text-ink",
     );
 
   return (
@@ -322,7 +322,7 @@ function FeeBreakdown() {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
-        style={{ background: "radial-gradient(70% 60% at 85% 10%, rgba(230,247,242,0.95), rgba(230,247,242,0) 70%)" }}
+        style={{ background: "radial-gradient(70% 60% at 85% 10%, rgba(221,245,232,0.95), rgba(221,245,232,0) 70%)" }}
       />
 
       <div className="relative mx-auto max-w-[400px] overflow-hidden rounded-xl bg-white ring-1 ring-line shadow-float">
@@ -343,7 +343,7 @@ function FeeBreakdown() {
         {/* Payment summary */}
         <div className="px-4 pt-4 sm:px-5">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span className="font-mono text-[22px] font-medium tracking-[-0.02em] text-ink tabular">{aud(EXAMPLE_PAYMENT)}</span>
+            <span className="font-mono text-[22px] font-extrabold tracking-[-0.02em] text-ink tabular">{aud(EXAMPLE_PAYMENT)}</span>
             <span className="text-[12px] text-subtle">AUD</span>
             <Pill tone="success">Succeeded</Pill>
           </div>

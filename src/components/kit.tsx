@@ -32,7 +32,7 @@ export function Section({
   className?: string;
   children: React.ReactNode;
 }) {
-  const bg = tone === "ink" ? "bg-ink text-white" : tone === "canvas" ? "bg-canvas" : "bg-white";
+  const bg = tone === "ink" ? "bg-ink text-paper" : tone === "canvas" ? "bg-canvas" : "bg-white";
   return (
     <section id={id} className={cn("relative scroll-mt-20 overflow-hidden", bg, className)}>
       {guides && <GuideLines dark={tone === "ink"} />}
@@ -43,15 +43,15 @@ export function Section({
 
 export function Eyebrow({ children, dark = false }: { children: React.ReactNode; dark?: boolean }) {
   return (
-    <p className={cn("mb-4 text-[13px] font-medium tracking-wide", dark ? "text-brand-bright" : "text-brand")}>
+    <p className={cn("mb-4 text-[13px] font-bold uppercase tracking-[0.12em]", dark ? "text-brand-bright" : "text-brand-deep")}>
       {children}
     </p>
   );
 }
 
 /**
- * Two-tone headline: the lead clause in ink, the continuation in the body colour.
- * Keep the lead short and declarative; the rest explains.
+ * Two-tone headline, the brand's signature move: state it in forest, then pay it off in
+ * raised forest on light or mint on forest. Keep the lead short and declarative.
  */
 export function Headline({
   lead,
@@ -69,17 +69,17 @@ export function Headline({
   className?: string;
 }) {
   const sizes = {
-    xl: "text-[40px] leading-[1.04] sm:text-[56px] lg:text-[68px]",
-    lg: "text-[30px] leading-[1.1] md:text-[40px]",
-    md: "text-[24px] leading-[1.15] md:text-[28px]",
+    xl: "text-[46px] leading-[0.95] tracking-[-0.04em] sm:text-[60px] lg:text-[76px]",
+    lg: "text-[34px] leading-[1.0] md:text-[48px]",
+    md: "text-[24px] leading-[1.1] md:text-[28px]",
   };
   return (
-    <Tag className={cn("font-medium tracking-[-0.035em] text-balance", sizes[size], dark ? "text-white" : "text-ink", className)}>
+    <Tag className={cn("font-extrabold tracking-[-0.035em] text-balance", sizes[size], dark ? "text-paper" : "text-ink", className)}>
       {lead}
       {rest && (
         <>
           {" "}
-          <span className={dark ? "text-white/60" : "text-body"}>{rest}</span>
+          <span className={dark ? "text-brand-bright" : "text-brand-deep"}>{rest}</span>
         </>
       )}
     </Tag>
@@ -104,17 +104,17 @@ export function ButtonLink({
   className?: string;
 }) {
   const styles: Record<ButtonVariant, string> = {
-    primary: "bg-brand text-white hover:bg-brand-deep",
-    secondary: "bg-white text-ink ring-1 ring-line hover:ring-ink/25",
-    light: "bg-white text-ink hover:bg-white/90",
-    ghostDark: "text-white ring-1 ring-white/25 hover:ring-white/60",
+    primary: "bg-brand text-paper hover:bg-brand-deep",
+    secondary: "bg-transparent text-ink ring-2 ring-inset ring-ink hover:bg-ink/5",
+    light: "bg-brand-bright text-ink hover:bg-[#B5EBCF]",
+    ghostDark: "text-brand-bright ring-2 ring-inset ring-brand-bright/70 hover:ring-brand-bright",
   };
   return (
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
-        "group inline-flex h-11 items-center justify-center gap-1 rounded-md px-5 text-[15px] font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+        "group inline-flex h-12 items-center justify-center gap-1 rounded-full px-6 text-[16px] font-bold transition-colors focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-brand-bright",
         styles[variant],
         className,
       )}
@@ -149,7 +149,7 @@ export function Tile({ className, children, dark = false }: { className?: string
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl",
+        "relative overflow-hidden rounded-[20px]",
         dark ? "bg-ink-soft ring-1 ring-line-dark" : "bg-white ring-1 ring-line shadow-card",
         className,
       )}
@@ -192,12 +192,12 @@ type PillTone = "success" | "pending" | "info" | "neutral";
 
 export function Pill({ tone = "neutral", children }: { tone?: PillTone; children: React.ReactNode }) {
   const tones: Record<PillTone, string> = {
-    success: "bg-[#E3F8EF] text-[#0A6B4F]",
-    pending: "bg-[#FFF4DB] text-[#8A5A00]",
-    info: "bg-[#E8F0FF] text-[#2152B8]",
+    success: "bg-[#DDF5E8] text-[#1C5A46]",
+    pending: "bg-[#FBEFD0] text-[#8A5A00]",
+    info: "bg-[#E8EEF9] text-[#24426E]",
     neutral: "bg-canvas text-body",
   };
-  return <span className={cn("inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium", tones[tone])}>{children}</span>;
+  return <span className={cn("inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-semibold", tones[tone])}>{children}</span>;
 }
 
 /** Neutral text marks for payment methods. Not official logos. */

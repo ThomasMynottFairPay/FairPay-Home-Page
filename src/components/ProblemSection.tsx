@@ -23,11 +23,11 @@ const points = [
 
 /* Illustrative members, bottom of the stack first. Heights are % of the plot. */
 const members = [
-  { name: "Harbour Street Café", h: 14, color: "#0A7A67", you: true },
-  { name: "Riverside Netball Club", h: 12, color: "#0E9478" },
-  { name: "Northside Food Relief", h: 16, color: "#13B394" },
-  { name: "Bright Minds Tutoring", h: 10, color: "#19D3AE" },
-  { name: "Coastline Plumbing", h: 13, color: "#74E2CB" },
+  { name: "Harbour Street Café", h: 14, color: "#0E3B2E", you: true },
+  { name: "Riverside Netball Club", h: 12, color: "#1C5A46" },
+  { name: "Northside Food Relief", h: 16, color: "#3F7A64" },
+  { name: "Bright Minds Tutoring", h: 10, color: "#9FE3C0" },
+  { name: "Coastline Plumbing", h: 13, color: "#C9DCCB" },
 ];
 const YOU_HEIGHT = members[0].h;
 
@@ -40,7 +40,7 @@ function Grid() {
       {[0, 25, 50, 75].map((t) => (
         <span key={t} className="absolute inset-x-0 border-t border-dashed border-line" style={{ top: `${t}%` }} />
       ))}
-      <span className="absolute inset-x-0 bottom-0 border-t border-[#CBD3DE]" />
+      <span className="absolute inset-x-0 bottom-0 border-t border-[#C9D5CB]" />
     </div>
   );
 }
@@ -80,10 +80,10 @@ function OnYourOwn() {
           </Column>
           <Column label="Larger businesses">
             <div
-              className="relative w-10 rounded-t-[3px] ring-1 ring-inset ring-[#CBD3DE]"
+              className="relative w-10 rounded-t-[3px] ring-1 ring-inset ring-[#C9D5CB]"
               style={{
                 height: "78%",
-                background: "repeating-linear-gradient(135deg, #E4E9F0 0 1px, #F6F8FB 1px 6px)",
+                background: "repeating-linear-gradient(135deg, #D9E3DA 0 1px, #F3F7EC 1px 6px)",
               }}
             >
               <span className="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap">
@@ -243,7 +243,7 @@ export function ProblemSection() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="text-[15px] font-medium leading-snug text-ink">{p.title}</h3>
+                    <h3 className="text-[15px] font-extrabold leading-snug text-ink">{p.title}</h3>
                     <p className="mt-1 text-[15px] leading-[1.55] text-body">{p.body}</p>
                   </div>
                 </li>
