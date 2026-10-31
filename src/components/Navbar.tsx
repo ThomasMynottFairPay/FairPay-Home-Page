@@ -19,19 +19,25 @@ const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 
 /**
- * FairPay mark: three small blocks become two, then one full bar.
- * Many members' volume stacking into a single pool of buying power.
+ * FairPay mark ("the pool"): three small dots joining one big circle.
+ * Many members' volume pooling into a single source of buying power.
+ * Geometry matches the brand master (166 x 88).
  */
 export function FairPayMark({ dark = false, className }: { dark?: boolean; className?: string }) {
-  const fill = dark ? "#19D3AE" : "#0A7A67";
+  const fill = dark ? "#A0E3C0" : "#1D5A45";
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className={cn("h-[22px] w-[22px] shrink-0", className)}>
-      <rect x="2" y="3.5" width="5.33" height="4.5" rx="1.6" fill={fill} opacity="0.4" />
-      <rect x="9.33" y="3.5" width="5.33" height="4.5" rx="1.6" fill={fill} opacity="0.4" />
-      <rect x="16.67" y="3.5" width="5.33" height="4.5" rx="1.6" fill={fill} opacity="0.4" />
-      <rect x="2" y="10" width="9" height="4.5" rx="1.6" fill={fill} opacity="0.7" />
-      <rect x="13" y="10" width="9" height="4.5" rx="1.6" fill={fill} opacity="0.7" />
-      <rect x="2" y="16.5" width="20" height="4.5" rx="1.6" fill={fill} />
+    <svg
+      viewBox="0 0 166 88"
+      aria-hidden="true"
+      focusable="false"
+      className={cn("h-[20px] w-auto shrink-0", className)}
+    >
+      <g fill={fill}>
+        <circle cx="9" cy="44" r="9" />
+        <circle cx="33" cy="44" r="11" />
+        <circle cx="62" cy="44" r="14" />
+        <circle cx="122" cy="44" r="44" />
+      </g>
     </svg>
   );
 }
