@@ -14,7 +14,7 @@ type Method = "Visa" | "Mastercard" | "Apple Pay" | "Google Pay" | "PayTo";
 
 /** Faint dot grid behind each mockup, fading out towards the edges (same treatment as Products). */
 const DOTS: React.CSSProperties = {
-  backgroundImage: "radial-gradient(circle, #D5DDE7 1px, transparent 1.4px)",
+  backgroundImage: "radial-gradient(circle, #D9E3DA 1px, transparent 1.4px)",
   backgroundSize: "14px 14px",
   maskImage: "radial-gradient(ellipse 85% 80% at 50% 40%, #000 30%, transparent 85%)",
   WebkitMaskImage: "radial-gradient(ellipse 85% 80% at 50% 40%, #000 30%, transparent 85%)",
@@ -91,7 +91,7 @@ function CaseTile({
 /** Tile heading: ink title, body-colour sentence, read as one line (same type as the Products tiles). */
 function Heading({ title, detail }: { title: string; detail: string }) {
   return (
-    <h3 className="max-w-[34rem] text-[17px] font-medium leading-[1.45] tracking-[-0.015em] text-ink sm:text-[18px] lg:text-[17px] xl:text-[18px]">
+    <h3 className="max-w-[34rem] text-[17px] font-extrabold leading-[1.45] tracking-[-0.015em] text-ink sm:text-[18px] lg:text-[17px] xl:text-[18px]">
       {title}. <span className="font-normal text-body">{detail}</span>
     </h3>
   );
@@ -366,7 +366,7 @@ function InvoicesStage() {
             <motion.div
               key={inv.no}
               initial={false}
-              animate={flash ? { backgroundColor: ["rgba(230,247,242,1)", "rgba(230,247,242,0)"] } : undefined}
+              animate={flash ? { backgroundColor: ["rgba(221,245,232,1)", "rgba(221,245,232,0)"] } : undefined}
               transition={{ duration: 2.2, ease: "easeOut" }}
               className={cn(INVOICE_COLS, "border-b border-line/60 py-2 text-[11.5px] last:border-b-0")}
             >
@@ -595,8 +595,8 @@ function CafeDashboard() {
                   <motion.li
                     key={k}
                     layout
-                    initial={{ opacity: 0, y: -10, backgroundColor: "rgba(230,247,242,1)" }}
-                    animate={{ opacity: 1, y: 0, backgroundColor: "rgba(230,247,242,0)" }}
+                    initial={{ opacity: 0, y: -10, backgroundColor: "rgba(221,245,232,1)" }}
+                    animate={{ opacity: 1, y: 0, backgroundColor: "rgba(221,245,232,0)" }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: EASE, backgroundColor: { duration: 1.6 } }}
                     className={cn("flex items-center gap-2.5 border-t border-line/70 px-4 py-2 text-[11.5px]", i === 0 && "border-line")}

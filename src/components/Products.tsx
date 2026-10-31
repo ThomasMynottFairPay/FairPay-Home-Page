@@ -35,7 +35,7 @@ function TileHead({ title, children, className }: { title: string; children: Rea
   const type = "text-[17px] leading-[1.45] tracking-[-0.015em] sm:text-[18px]";
   return (
     <div className={cn("relative z-10 max-w-[34rem] px-6 pt-7 sm:px-8 sm:pt-8 lg:px-9 lg:pt-9", className)}>
-      <h3 className={cn("inline font-medium text-ink", type)}>{title}</h3>{" "}
+      <h3 className={cn("inline font-extrabold text-ink", type)}>{title}</h3>{" "}
       <p className={cn("inline text-body", type)}>{children}</p>
     </div>
   );
@@ -57,7 +57,7 @@ const dots = (colour: string): React.CSSProperties => ({
   maskImage: "radial-gradient(ellipse 85% 80% at 50% 40%, #000 30%, transparent 85%)",
   WebkitMaskImage: "radial-gradient(ellipse 85% 80% at 50% 40%, #000 30%, transparent 85%)",
 });
-const DOTS = dots("#D5DDE7");
+const DOTS = dots("#D9E3DA");
 const DOTS_ON_GRADIENT = dots("rgba(255,255,255,0.28)");
 
 /**
@@ -142,7 +142,7 @@ function Checkout() {
             <span className="truncate text-[12px] font-medium text-ink">Bright Minds Tutoring</span>
           </div>
           <p className="mt-4 text-[11.5px] text-subtle sm:mt-6">Term 4 tuition</p>
-          <p className="mt-0.5 font-mono text-[22px] font-medium tracking-[-0.03em] text-ink tabular sm:text-[26px]">
+          <p className="mt-0.5 font-mono text-[22px] font-extrabold tracking-[-0.03em] text-ink tabular sm:text-[26px]">
             {aud(ORDER_TOTAL)}
           </p>
           <ul className="mt-6 hidden space-y-3.5 sm:block">
@@ -298,14 +298,14 @@ function PayToPhone() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="flex h-full items-center gap-2.5 rounded-xl bg-[#E3F8EF] px-3"
+                  className="flex h-full items-center gap-2.5 rounded-xl bg-[#DDF5E8] px-3"
                 >
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#0A6B4F] text-white">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#1C5A46] text-white">
                     <Check className="h-3.5 w-3.5" strokeWidth={2.5} />
                   </span>
                   <div>
-                    <p className="text-[12px] font-medium text-[#0A6B4F]">Agreement approved</p>
-                    <p className="text-[10.5px] text-[#0A6B4F]/80">First payment 1 Oct</p>
+                    <p className="text-[12px] font-medium text-[#1C5A46]">Agreement approved</p>
+                    <p className="text-[10.5px] text-[#1C5A46]/80">First payment 1 Oct</p>
                   </div>
                 </motion.div>
               ) : (
@@ -385,14 +385,14 @@ function InvoiceMock() {
       <div className="p-4 sm:p-5">
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-2">
-            <OrgMark initials="CP" className="bg-[#1D5C8C]" />
+            <OrgMark initials="CP" className="bg-[#24426E]" />
             <span className="truncate text-[12px] font-medium text-ink">Coastline Plumbing</span>
           </div>
           <Pill tone="info">Open</Pill>
         </div>
 
         <p className="mt-5 text-[11px] text-subtle">Amount due</p>
-        <p className="font-mono text-[24px] font-medium tracking-[-0.03em] text-ink tabular">{aud(INVOICE_SUBTOTAL + INVOICE_GST)}</p>
+        <p className="font-mono text-[24px] font-extrabold tracking-[-0.03em] text-ink tabular">{aud(INVOICE_SUBTOTAL + INVOICE_GST)}</p>
 
         <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-[11px]">
           {[
@@ -461,7 +461,7 @@ function InvoiceEmail() {
       </div>
       <div className="px-3.5 pb-3.5 pt-3">
         <div className="flex items-center gap-2">
-          <OrgMark initials="CP" className="bg-[#1D5C8C]" />
+          <OrgMark initials="CP" className="bg-[#24426E]" />
           <div className="min-w-0 leading-tight">
             <p className="truncate text-[12px] font-medium text-ink">Coastline Plumbing</p>
             <p className="truncate text-[10.5px] text-subtle">To Harbour Street Café</p>

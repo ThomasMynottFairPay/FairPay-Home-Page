@@ -180,49 +180,58 @@
   }
 }
 
-/* FairPay design system (see DESIGN.md). */
+/* FairPay design system: Brand Guide v1.0 "The pool, forest and mint" (see DESIGN.md). */
 @theme {
-  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif; /* one family; amounts use .tabular */
 
-  --color-ink: #0B1B2E;          /* headings, primary text, dark sections */
-  --color-ink-soft: #1B2B40;     /* raised surfaces on dark */
-  --color-body: #4A5B70;         /* paragraph text */
-  --color-subtle: #5F6E80;       /* captions, meta (AA: 5.2:1 white, 4.9:1 canvas, 4.7:1 brand-tint) */
-  --color-line: #E4E9F0;         /* hairlines, card borders */
-  --color-line-dark: #26384F;    /* hairlines on dark */
-  --color-canvas: #F6F8FB;       /* alternate section background */
+  /* Brand palette */
+  --color-forest-950: #0A2E24;   /* footer and deepest ground only */
+  --color-forest-900: #0E3B2E;   /* the brand colour: grounds, primary buttons on light, text on light */
+  --color-forest-700: #1C5A46;   /* raised forest: cards on forest, accent text and links on light */
+  --color-forest-500: #3F7A64;   /* borders on forest, never text */
+  --color-mint-300: #9FE3C0;     /* the one accent */
+  --color-mint-100: #DDF5E8;     /* icon wells, highlighted columns, success backgrounds */
+  --color-paper: #F3F7EC;        /* light page background, text on forest */
+  --color-sage: #C9DCCB;         /* secondary text on forest */
+  --color-moss: #5B6F66;         /* secondary text on paper and white */
 
-  --color-brand: #0A7A67;        /* buttons, links (white text AA) */
-  --color-brand-deep: #06594B;   /* hover */
-  --color-brand-bright: #19D3AE; /* highlights on dark, progress fill */
-  --color-brand-tint: #E6F7F2;   /* soft brand wash */
+  /* Semantic tokens used across the page, mapped onto the palette */
+  --color-ink: #0E3B2E;          /* headings, primary text, dark (forest) sections */
+  --color-ink-soft: #1C5A46;     /* raised surfaces on forest */
+  --color-body: #5B6F66;         /* paragraph text (moss) */
+  --color-subtle: #5B6F66;       /* captions, meta (moss, 4.9:1 on paper) */
+  --color-line: #D9E3DA;         /* hairlines, card borders on light */
+  --color-line-dark: #3F7A64;    /* hairlines on forest */
+  --color-canvas: #F3F7EC;       /* paper: alternate section background */
 
-  --color-sky: #3D8BFD;          /* gradient stops */
-  --color-violet: #7B61FF;
-  --color-coral: #FF8A5B;
-  --color-sun: #FFC857;
+  --color-brand: #0E3B2E;        /* primary buttons on light */
+  --color-brand-deep: #1C5A46;   /* accent text and links on light, button hover */
+  --color-brand-bright: #9FE3C0; /* mint: accents on forest, data fill */
+  --color-brand-tint: #DDF5E8;   /* mint tint */
 
-  --shadow-card: 0 1px 1px rgba(11,27,46,0.04), 0 8px 24px -8px rgba(11,27,46,0.12);
-  --shadow-float: 0 2px 4px rgba(11,27,46,0.04), 0 24px 48px -16px rgba(11,27,46,0.24);
+  --shadow-card: none;
+  --shadow-float: 0 2px 4px rgba(14,59,46,0.05), 0 24px 48px -16px rgba(14,59,46,0.22);
 }
 
 @layer base {
   html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-  body { font-family: var(--font-sans); color: var(--color-ink); font-feature-settings: "ss01", "cv11"; }
+  body { font-family: var(--font-sans); color: var(--color-ink); }
   .tabular { font-variant-numeric: tabular-nums; }
+  .font-mono { font-variant-numeric: tabular-nums; }
 }
 
-/* Soft multi-stop gradient used for hero mesh and accent panels. */
+/* The pool circle: one large mint circle bleeding off a corner. */
 .fp-mesh {
-  background:
-    radial-gradient(40% 55% at 78% 22%, rgba(25,211,174,0.55), transparent 70%),
-    radial-gradient(38% 50% at 92% 48%, rgba(61,139,253,0.45), transparent 70%),
-    radial-gradient(34% 45% at 66% 60%, rgba(123,97,255,0.35), transparent 70%),
-    radial-gradient(30% 40% at 96% 8%, rgba(255,138,91,0.35), transparent 70%);
+  background: radial-gradient(circle at 100% 0%, var(--color-mint-300) 0 34%, transparent 34.2%);
 }
 .fp-panel-gradient {
-  background: linear-gradient(135deg, #19D3AE 0%, #3D8BFD 52%, #7B61FF 100%);
+  background: var(--color-forest-900);
+}
+/* Dot grid: mint dots, 5px radius on a 26px pitch. */
+.fp-dots {
+  background-image: radial-gradient(circle, var(--color-mint-300) 5px, transparent 5.5px);
+  background-size: 26px 26px;
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }

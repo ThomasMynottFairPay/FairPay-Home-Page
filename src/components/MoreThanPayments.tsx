@@ -39,7 +39,7 @@ function TileHead({ title, children }: { title: string; children: React.ReactNod
   const type = "text-[16px] leading-[1.45] tracking-[-0.012em] sm:text-[17px]";
   return (
     <div className="relative z-10 max-w-[30rem] text-pretty px-6 pt-6 sm:px-8 sm:pt-8">
-      <h3 className={cn("inline font-medium text-white", type)}>{title}</h3>{" "}
+      <h3 className={cn("inline font-extrabold text-white", type)}>{title}</h3>{" "}
       <p className={cn("inline text-white/60", type)}>{children}</p>
     </div>
   );
@@ -52,7 +52,7 @@ function Stage({ children, className, glow = false }: { children: React.ReactNod
       {glow && (
         <div
           className="pointer-events-none absolute inset-0"
-          style={{ background: "radial-gradient(70% 70% at 50% 100%, rgba(25,211,174,0.16), rgba(25,211,174,0) 70%)" }}
+          style={{ background: "radial-gradient(70% 70% at 50% 100%, rgba(159,227,192,0.16), rgba(159,227,192,0) 70%)" }}
         />
       )}
       {children}
@@ -77,13 +77,13 @@ function Window({ children, className }: { children: React.ReactNode; className?
 /** Small FairPay mark for inside mockups (mirrors the navbar mark). */
 function FpMark() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="h-4 w-4 shrink-0">
-      <rect x="2" y="3.5" width="5.33" height="4.5" rx="1.6" fill="#0A7A67" opacity="0.4" />
-      <rect x="9.33" y="3.5" width="5.33" height="4.5" rx="1.6" fill="#0A7A67" opacity="0.4" />
-      <rect x="16.67" y="3.5" width="5.33" height="4.5" rx="1.6" fill="#0A7A67" opacity="0.4" />
-      <rect x="2" y="10" width="9" height="4.5" rx="1.6" fill="#0A7A67" opacity="0.7" />
-      <rect x="13" y="10" width="9" height="4.5" rx="1.6" fill="#0A7A67" opacity="0.7" />
-      <rect x="2" y="16.5" width="20" height="4.5" rx="1.6" fill="#0A7A67" />
+    <svg viewBox="0 0 166 88" aria-hidden="true" focusable="false" className="h-2.5 w-auto shrink-0">
+      <g fill="#0E3B2E">
+        <circle cx="9" cy="44" r="9" />
+        <circle cx="33" cy="44" r="11" />
+        <circle cx="62" cy="44" r="14" />
+        <circle cx="122" cy="44" r="44" />
+      </g>
     </svg>
   );
 }
@@ -100,8 +100,8 @@ function XeroTag() {
 type AvatarTone = "brand" | "info" | "warm" | "neutral";
 const AVATAR: Record<AvatarTone, string> = {
   brand: "bg-brand-tint text-brand",
-  info: "bg-[#E8F0FF] text-[#2152B8]",
-  warm: "bg-[#FFF4DB] text-[#8A5A00]",
+  info: "bg-[#E8EEF9] text-[#24426E]",
+  warm: "bg-[#FBEFD0] text-[#8A5A00]",
   neutral: "bg-canvas text-body ring-1 ring-line",
 };
 
@@ -230,7 +230,7 @@ function XeroSync() {
 function Toggle() {
   return (
     <span className="relative inline-flex h-4 w-7 shrink-0 items-center rounded-full bg-brand">
-      <span className="absolute right-0.5 h-3 w-3 rounded-full bg-white shadow-[0_1px_2px_rgba(11,27,46,0.3)]" />
+      <span className="absolute right-0.5 h-3 w-3 rounded-full bg-white shadow-[0_1px_2px_rgba(14,59,46,0.3)]" />
     </span>
   );
 }
@@ -364,7 +364,7 @@ function CustomerList() {
             key={c.name}
             className={cn(
               "flex items-center gap-3 border-b border-line px-4 py-2.5",
-              i === 0 && "bg-brand-tint/60 shadow-[inset_2px_0_0_#0A7A67]",
+              i === 0 && "bg-brand-tint/60 shadow-[inset_2px_0_0_#1C5A46]",
             )}
           >
             <Avatar initials={c.initials} tone={c.tone} />
@@ -498,9 +498,9 @@ function Checkbox({ state }: { state: CellState }) {
     <span
       className={cn(
         "grid h-3.5 w-3.5 shrink-0 place-items-center rounded-[4px] ring-1 transition-colors duration-300",
-        state === "idle" && "bg-white ring-[#C9D2DE]",
+        state === "idle" && "bg-white ring-[#C9D5CB]",
         state === "selected" && "bg-brand ring-brand",
-        state === "matched" && "bg-[#0A6B4F] ring-[#0A6B4F]",
+        state === "matched" && "bg-[#1C5A46] ring-[#1C5A46]",
       )}
     >
       {state !== "idle" && <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />}
@@ -515,7 +515,7 @@ function MatchCell({ title, meta, amount, state }: { title: string; meta: string
         "flex items-center gap-2.5 rounded-lg px-3 py-2.5 ring-1 transition-colors duration-300",
         state === "idle" && "ring-line",
         state === "selected" && "bg-brand-tint/50 ring-brand/40",
-        state === "matched" && "bg-[#E3F8EF]/70 ring-[#0A6B4F]/25",
+        state === "matched" && "bg-[#DDF5E8]/70 ring-[#1C5A46]/25",
       )}
     >
       <Checkbox state={state} />
@@ -574,7 +574,7 @@ function Reconcile() {
                   <span
                     className={cn(
                       "grid h-6 w-6 place-items-center rounded-full ring-1 transition-colors duration-300",
-                      matched ? "bg-[#0A6B4F] text-white ring-[#0A6B4F]" : "bg-white text-brand ring-brand/40",
+                      matched ? "bg-[#1C5A46] text-white ring-[#1C5A46]" : "bg-white text-brand ring-brand/40",
                     )}
                   >
                     <Link2 className="h-3.5 w-3.5" />
@@ -590,7 +590,7 @@ function Reconcile() {
       <div className="mx-4 mt-3 flex min-h-12 shrink-0 items-center justify-between gap-3 rounded-lg bg-canvas px-3 py-2 ring-1 ring-line">
         {matched ? (
           <>
-            <p className="inline-flex min-w-0 items-center gap-1.5 text-[11.5px] font-medium text-[#0A6B4F]">
+            <p className="inline-flex min-w-0 items-center gap-1.5 text-[11.5px] font-medium text-[#1C5A46]">
               <Check className="h-3.5 w-3.5 shrink-0" />
               <span className="truncate">INV-1042 matched to payment</span>
             </p>
@@ -921,7 +921,7 @@ export function MoreThanPayments() {
       <div
         aria-hidden
         className="pointer-events-none absolute -top-48 right-[-20%] h-[560px] w-[900px] max-w-none"
-        style={{ background: "radial-gradient(closest-side, rgba(25,211,174,0.12), rgba(25,211,174,0))" }}
+        style={{ background: "radial-gradient(closest-side, rgba(159,227,192,0.12), rgba(159,227,192,0))" }}
       />
       <Container>
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end lg:gap-8">

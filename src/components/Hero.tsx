@@ -148,14 +148,14 @@ function VolumeChart() {
       <svg viewBox="0 0 100 40" preserveAspectRatio="none" className="absolute inset-0 h-full w-full overflow-visible">
         <defs>
           <linearGradient id="fp-hero-area" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#19D3AE" stopOpacity="0.28" />
-            <stop offset="100%" stopColor="#19D3AE" stopOpacity="0" />
+            <stop offset="0%" stopColor="#9FE3C0" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="#9FE3C0" stopOpacity="0" />
           </linearGradient>
         </defs>
-        <line x1="0" y1="39.5" x2="100" y2="39.5" stroke="#E4E9F0" strokeWidth="1" vectorEffect="non-scaling-stroke" />
-        <path d={smoothPath(YESTERDAY)} fill="none" stroke="#C3CCD8" strokeWidth="1.25" strokeDasharray="3 3" vectorEffect="non-scaling-stroke" />
+        <line x1="0" y1="39.5" x2="100" y2="39.5" stroke="#D9E3DA" strokeWidth="1" vectorEffect="non-scaling-stroke" />
+        <path d={smoothPath(YESTERDAY)} fill="none" stroke="#B9C9BD" strokeWidth="1.25" strokeDasharray="3 3" vectorEffect="non-scaling-stroke" />
         <path d={`${today} L${last[0]},40 L0,40 Z`} fill="url(#fp-hero-area)" />
-        <path d={today} fill="none" stroke="#0A7A67" strokeWidth="1.75" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+        <path d={today} fill="none" stroke="#1C5A46" strokeWidth="1.75" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
       </svg>
       <span
         className="absolute h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand ring-2 ring-white"
@@ -175,8 +175,8 @@ const NAV = [
   { icon: Handshake, label: "Community" },
 ];
 
-const FRESH_INITIAL = { height: 0, opacity: 0, backgroundColor: "rgba(230,247,242,1)" };
-const ROW_ANIMATE = { height: ROW_H, opacity: 1, backgroundColor: "rgba(230,247,242,0)" };
+const FRESH_INITIAL = { height: 0, opacity: 0, backgroundColor: "rgba(221,245,232,1)" };
+const ROW_ANIMATE = { height: ROW_H, opacity: 1, backgroundColor: "rgba(221,245,232,0)" };
 const ROW_TRANSITION = {
   height: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
   opacity: { duration: 0.35, delay: 0.1 },
@@ -243,7 +243,7 @@ function Dashboard({ rows, volume, count }: { rows: Row[]; volume: number; count
                 Today
               </span>
               <span className="flex items-center gap-1">
-                <span className="h-0 w-2.5 border-t border-dashed border-[#C3CCD8]" />
+                <span className="h-0 w-2.5 border-t border-dashed border-[#B9C9BD]" />
                 Yesterday
               </span>
             </span>
@@ -341,7 +341,7 @@ function Checkout({ paid }: { paid: boolean }) {
             transition={{ duration: 0.3 }}
           >
             <p className="mt-5 text-[11px] text-subtle">Junior registration · Term 4</p>
-            <p className="mt-0.5 text-[28px] font-medium leading-none tracking-[-0.03em] text-ink tabular">{money(48)}</p>
+            <p className="mt-0.5 text-[28px] font-extrabold leading-none tracking-[-0.03em] text-ink tabular">{money(48)}</p>
             <div className="mt-5 flex h-10 items-center justify-center gap-1 rounded-lg bg-black text-[13px] text-white">
               <span className="opacity-75">Pay with</span>
               <span className="font-semibold">Apple Pay</span>
@@ -353,7 +353,7 @@ function Checkout({ paid }: { paid: boolean }) {
             </div>
             <div className="divide-y divide-line overflow-hidden rounded-lg ring-1 ring-line">
               <div className="flex items-center gap-2.5 px-3 py-2.5">
-                <span className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-inset ring-[#C3CCD8]" />
+                <span className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-inset ring-[#B9C9BD]" />
                 <span className="font-medium text-ink">Card</span>
                 <span className="ml-auto flex gap-1">
                   <MethodMark name="Visa" className="min-w-7" />

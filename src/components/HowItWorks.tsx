@@ -280,7 +280,7 @@ function Toggle({ delay }: { delay: number }) {
         transition={{ duration: 0.3, delay }}
       />
       <motion.span
-        className="absolute left-0.5 top-0.5 h-3 w-3 rounded-full bg-white shadow-[0_1px_2px_rgba(11,27,46,0.25)]"
+        className="absolute left-0.5 top-0.5 h-3 w-3 rounded-full bg-white shadow-[0_1px_2px_rgba(14,59,46,0.25)]"
         initial={reduce ? false : { x: 0 }}
         whileInView={{ x: 12 }}
         viewport={VIEW}
@@ -502,7 +502,7 @@ function Rail({ index, last, wide }: { index: number; last: boolean; wide: boole
 }
 
 const DOTS: React.CSSProperties = {
-  backgroundImage: "radial-gradient(circle, #D5DDE7 1px, transparent 1.4px)",
+  backgroundImage: "radial-gradient(circle, #D9E3DA 1px, transparent 1.4px)",
   backgroundSize: "14px 14px",
   maskImage: "radial-gradient(ellipse 75% 70% at 50% 50%, #000 25%, transparent 80%)",
   WebkitMaskImage: "radial-gradient(ellipse 75% 70% at 50% 50%, #000 25%, transparent 80%)",
@@ -551,7 +551,7 @@ export function HowItWorks() {
                 <Rail index={i} last={i === STEPS.length - 1} wide={wide} />
 
                 <div className="col-start-2 row-start-1 pt-0.5 xl:order-3 xl:px-6 xl:pb-10 xl:pt-1">
-                  <h3 className="text-[17px] font-medium leading-snug tracking-[-0.015em] text-ink">{title}</h3>
+                  <h3 className="text-[17px] font-extrabold leading-snug tracking-[-0.015em] text-ink">{title}</h3>
                   <p className="mt-2 max-w-[440px] text-[15px] leading-[1.55] text-body">{body}</p>
                 </div>
 

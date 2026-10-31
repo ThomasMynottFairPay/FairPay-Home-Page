@@ -51,7 +51,7 @@ function ProgressTrack({ value, goal }: { value: number | null; goal: number }) 
           </>
         )}
         {/* Goal marker */}
-        <span aria-hidden className="absolute -right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-bright text-ink shadow-[0_0_0_6px_rgba(25,211,174,0.15)] md:h-9 md:w-9">
+        <span aria-hidden className="absolute -right-1 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-brand-bright text-ink shadow-[0_0_0_6px_rgba(159,227,192,0.15)] md:h-9 md:w-9">
           <Flag className="h-4 w-4" strokeWidth={2.25} />
         </span>
       </div>
@@ -95,7 +95,7 @@ function VolumeCard() {
     <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-ink text-white ring-1 ring-ink shadow-float">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_95%_0%,rgba(25,211,174,0.2),transparent_70%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_80%_at_95%_0%,rgba(159,227,192,0.2),transparent_70%)]"
       />
 
       <div className="relative flex flex-1 flex-col gap-8 p-6 sm:p-8 md:gap-10 md:p-10">
@@ -106,7 +106,7 @@ function VolumeCard() {
               <Flag aria-hidden className="h-4 w-4" strokeWidth={2.25} />
               Our first goal
             </p>
-            <p className="mt-3 text-[52px] font-medium leading-[0.95] tracking-[-0.045em] tabular sm:text-[72px] md:text-[88px]">
+            <p className="mt-3 text-[52px] font-extrabold leading-[0.95] tracking-[-0.045em] tabular sm:text-[72px] md:text-[88px]">
               {formatAud(firstGoalAud)}
             </p>
           </div>
@@ -168,7 +168,7 @@ function FoundingOffer() {
         <p className="text-[13px] font-medium text-brand">Founding membership</p>
         {open && <Pill tone="success">Open</Pill>}
       </div>
-      <h3 className="mt-4 text-[24px] font-medium leading-[1.2] tracking-[-0.03em] text-balance text-ink md:text-[26px]">
+      <h3 className="mt-4 text-[24px] font-extrabold leading-[1.2] tracking-[-0.03em] text-balance text-ink md:text-[26px]">
         Join before we reach {formatAud(firstGoalAud)} and become a founding member.
       </h3>
 
@@ -186,7 +186,7 @@ function FoundingOffer() {
       </ul>
 
       <div className="mt-auto pt-7">
-        <ButtonLink href={joinLink("Founding offer")} external className="w-full">
+        <ButtonLink href={joinLink("Founding offer")} external className="w-full whitespace-nowrap">
           Claim founding membership
           <span className="sr-only"> (opens in a new tab)</span>
         </ButtonLink>
